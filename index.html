@@ -3,473 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mirador de Anapoima</title>
+<meta name="description" content="Tu lugar en Anapoima: lotes campestres desde 1.000 m² a 5 minutos del parque principal. Lotes desde $220.000.000.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="fotos/colibri.png">
-</head>
-<body>
-<title>Mirador de Anapoima</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Tu lugar en Anapoima: lotes campestres desde 1.000 m² a 5 minutos del parque principal. Condominio Mirador de Anapoima, lotes desde $220.000.000.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap">
-<style>
-/* Lenguaje de las referencias: foto dentro de un marco redondeado sobre fondo crema, menú de vidrio,
-   serif elegante con cursivas + sans limpia, datos en tarjetas de vidrio, pastillas con flecha en círculo,
-   bloque verde profundo de contraste. El magenta del logo queda como acento fino. Apariencia clara a propósito. */
-:root{
-  color-scheme:light;
-  --crema:#F3EFE8;
-  --crema-2:#EAE4DA;
-  --blanco:#FFFFFF;
-  --tinta:#1D1B17;
-  --tinta-2:#57514A;
-  --gris:#8B847B;
-  --linea:#E0D9CE;
-  --verde:#173A34;
-  --verde-2:#21493F;
-  --cafe:#784830;
-  --magenta:#E43060;
-  --sobre-verde:#D9E0DA;
-  --sobre-verde-2:#9DAEA3;
-  --acento:#D23A63;
-  --disponible:#7FA05A;
-  --reservado:#D6A85A;
-  --vendido:#CBC4B9;
-  --whatsapp:#25D366;
-  --whatsapp-tinta:#062A17;
-  --f-sans:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --r-marco:30px; --r-tarjeta:22px; --r-chico:14px;
-  --curva:cubic-bezier(.22,.8,.26,1);
-  --carril:1240px;
-}
-*,*::before,*::after{box-sizing:border-box}
-[hidden]{display:none!important}
-html{scroll-behavior:smooth;scroll-padding-top:90px;overflow-x:clip}
-body{margin:0;background:var(--crema);color:var(--tinta);font-family:var(--f-sans);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit}
-button,input,select{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--tinta);outline-offset:3px}
-.sobre-foto :focus-visible,.verde :focus-visible{outline-color:#fff}
-.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.carril{max-width:var(--carril);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.marco{margin-inline:max(12px,env(safe-area-inset-left,0px))}
-.saltar{position:fixed;top:-100px;left:16px;z-index:100;padding:12px 18px;background:#fff;border-radius:999px;font-weight:600}
-.saltar:focus{top:12px}
-
-/* Tipos */
-h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
-h2{font-family:var(--f-sans);font-weight:700;font-size:clamp(32px,3.9vw,52px);line-height:1.08;letter-spacing:-.035em}
-h2 em,h1 em{font-style:normal;color:var(--cafe)}
-h3{font-family:var(--f-sans);font-weight:600;font-size:18px;line-height:1.3}
-.ceja{display:flex;align-items:center;gap:12px;margin:0 0 18px;font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)}
-.ceja::after{content:"";width:44px;height:1px;background:currentColor;opacity:.7}
-.ceja img{width:22px;height:auto;flex:none}
-.texto{color:var(--tinta-2);margin:14px 0 0;max-width:52ch}
-.seccion{padding-block:clamp(72px,9vw,120px)}
-
-/* Botones: pastilla con flecha en círculo */
-.btn{display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:6px 6px 6px 24px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;border:0;cursor:pointer;transition:background .25s,color .25s,transform .25s var(--curva);white-space:nowrap;line-height:1.2}
-.btn__c{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;flex:none;transition:transform .35s var(--curva)}
-.btn__c svg{width:18px;height:18px}
-.btn:hover .btn__c{transform:rotate(45deg)}
-.btn--oscuro{background:var(--verde);color:#fff}
-.btn--oscuro .btn__c{background:#fff;color:var(--verde)}
-.btn--oscuro:hover{background:#15211B}
-.btn--blanco{background:#fff;color:var(--tinta)}
-.btn--blanco .btn__c{background:var(--verde);color:#fff}
-.btn--vidrio{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.btn--vidrio .btn__c{background:var(--whatsapp);color:var(--whatsapp-tinta)}
-.btn--wa{background:var(--whatsapp);color:var(--whatsapp-tinta)}
-.btn--wa .btn__c{background:#fff;color:var(--whatsapp-tinta)}
-.btn--linea{background:transparent;color:var(--tinta);box-shadow:inset 0 0 0 1px var(--linea)}
-.btn--linea .btn__c{background:var(--tinta);color:#fff}
-.btn--simple{padding:0 24px;justify-content:center}
-.btn--ancho{width:100%;justify-content:space-between}
-.btn[aria-disabled="true"]{opacity:.5}
-
-/* Portada */
-.hero{position:relative;margin-top:0;border-radius:var(--r-marco);overflow:hidden;min-height:max(560px,min(calc(100vh - 118px),820px));min-height:max(560px,min(calc(100svh - 118px),820px));color:#fff;display:flex;flex-direction:column;background:var(--verde)}
-.hero__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%}
-.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,22,18,.38) 0%,rgba(15,22,18,0) 28%,rgba(15,22,18,.05) 55%,rgba(15,22,18,.66) 100%);pointer-events:none}
-.hero>.hero__cuerpo,.hero>.hero__chip{position:relative;z-index:3}
-.hero__chip{align-self:flex-start;margin:22px 0 0 clamp(18px,3vw,44px);display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;font-size:13.5px;font-weight:600}
-.hero__chip img{width:30px;height:30px;border-radius:50%;background:#fff;padding:4px;object-fit:contain}
-.cab{display:flex;align-items:center;gap:16px;padding:14px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px));max-width:1440px;margin:0 auto}
-.cab__logo{flex:none;display:block}
-.cab__logo img{height:78px;width:auto}
-.cab__nav{display:flex;gap:2px;margin:0 auto;padding:5px;border-radius:999px;background:#fff;border:1px solid var(--linea)}
-.cab__nav a{padding:8px 15px;border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
-.cab__nav a:hover{background:var(--crema);color:var(--tinta)}
-.cab__acc{display:flex;align-items:center;gap:8px;flex:none}
-.cab__tel{display:inline-flex;align-items:center;gap:8px;padding:9px 16px 9px 10px;border-radius:999px;background:#fff;border:1px solid var(--linea);font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
-.cab__tel svg{width:18px;height:18px;color:#1EBE5A}
-.cab__acc .btn{min-height:46px;padding:4px 4px 4px 18px;font-size:14px}
-.cab__acc .btn .btn__c{width:38px;height:38px}
-.cab__menu{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--linea);background:#fff;color:var(--tinta);cursor:pointer;place-items:center}
-.cab__menu svg{width:20px;height:20px}
-.hero__cuerpo{flex:1;display:grid;padding-top:40px;grid-template-columns:minmax(0,1fr) 230px;gap:24px;align-items:end;padding:0 clamp(18px,3vw,44px) clamp(96px,10vw,120px)}
-.hero__sub{font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin:0 0 14px;color:rgba(255,255,255,.85)}
-.hero h1{font-family:var(--f-sans);font-weight:700;font-size:clamp(44px,6vw,88px);line-height:1;letter-spacing:-.045em;max-width:12ch;animation:subir 1s var(--curva) both}
-@keyframes subir{from{transform:translateY(18px)}to{transform:none}}
-.hero h1 em{font-style:normal;color:#F3E2D2}
-.hero__lead{max-width:40ch;margin:16px 0 0;color:rgba(255,255,255,.88);font-size:16px}
-.cifras-vidrio{display:grid;gap:10px}
-.vidrio{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:18px;padding:14px 18px}
-.vidrio b{display:block;font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:40px;line-height:1}
-.vidrio span{display:block;font-size:13.5px;color:rgba(255,255,255,.85);margin-top:4px;line-height:1.35}
-.hero__pie{position:absolute;left:50%;bottom:0;transform:translateX(-50%);z-index:4;display:flex;gap:8px;padding:12px 12px 0;background:var(--crema);border-radius:26px 26px 0 0}
-.hero__pie::before,.hero__pie::after{content:"";position:absolute;bottom:0;width:26px;height:26px;background:radial-gradient(circle at 0 0,transparent 25px,var(--crema) 26px)}
-.hero__pie::before{left:-26px;background:radial-gradient(circle at 0 0,transparent 25px,var(--crema) 26px)}
-.hero__pie::after{right:-26px;background:radial-gradient(circle at 100% 0,transparent 25px,var(--crema) 26px)}
-
-/* Conoce */
-.intro__titulo{text-align:center;max-width:760px;margin:0 auto clamp(44px,6vw,72px)}
-.intro__titulo .ceja{justify-content:center}
-.intro__titulo .ceja::before{content:"";width:44px;height:1px;background:currentColor;opacity:.7}
-.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:stretch}
-.intro__txt{display:flex;flex-direction:column;gap:16px}
-.intro__txt h3{font-size:22px;font-weight:600;letter-spacing:-.01em}
-.intro__txt p{margin:0;color:var(--tinta-2)}
-.intro__txt .btn{align-self:flex-start;margin-top:6px}
-.intro__comer{margin-top:auto;padding-top:22px;font-size:13.5px;color:var(--gris)}
-.intro__comer b{color:var(--tinta);font-weight:600}
-.intro__foto{position:relative;border-radius:var(--r-tarjeta);overflow:hidden;min-height:440px;display:block;color:#fff;text-decoration:none}
-.intro__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--curva)}
-.intro__foto:hover img{transform:scale(1.04)}
-.intro__foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.55))}
-.intro__play{position:absolute;z-index:1;left:18px;bottom:18px;right:18px;display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px}
-.intro__play span{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);flex:none}
-.intro__play svg{width:18px;height:18px;margin-left:2px}
-.intro__play small{display:block;font-weight:500;opacity:.85;font-size:13px}
-.lista-fina{list-style:none;margin:0;padding:0;display:grid;align-content:start}
-.lista-fina li{padding:16px 0;border-bottom:1px solid var(--linea)}
-.lista-fina li:first-child{padding-top:0}
-.lista-fina b{display:block;font-weight:600;font-size:16px}
-.lista-fina span{display:block;color:var(--tinta-2);font-size:15px;margin-top:2px}
-.cifras{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(56px,7vw,88px);border-top:1px solid var(--linea)}
-.cifras div{padding:26px 24px 0;border-left:1px solid var(--linea)}
-.cifras div:first-child{border-left:0;padding-left:0}
-.cifras b{display:block;font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:clamp(44px,4.6vw,64px);line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
-.cifras span{display:block;margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
-
-/* Por qué Mirador */
-.razones{position:relative;border-radius:var(--r-marco);overflow:hidden;color:#fff;padding:clamp(40px,6vw,80px) clamp(22px,5vw,72px)}
-.razones__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.razones::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,22,17,.78),rgba(14,22,17,.35))}
-.razones__in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,64px);align-items:center}
-.razones h2{color:#fff}
-.razones h2 em{color:rgba(255,255,255,.75)}
-.razones .ceja{color:rgba(255,255,255,.75)}
-.razones__grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.razon{padding:22px}
-.razon svg{width:28px;height:28px;margin-bottom:16px}
-.razon h3{color:#fff;font-size:17px}
-.razon p{margin:6px 0 0;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.82)}
-.incluye{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:14px;background:#fff;border-radius:var(--r-tarjeta);padding:8px}
-.incluye div{display:flex;align-items:center;gap:14px;padding:18px 20px;border-left:1px solid var(--linea)}
-.incluye div:first-child{border-left:0}
-.incluye i{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--crema);flex:none}
-.incluye svg{width:20px;height:20px}
-.incluye b{font-weight:600;font-size:15px;line-height:1.3}
-
-/* Lotes */
-.lotes{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(24px,4vw,48px);align-items:start}
-.datos-lote{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:8px}
-.datos-lote li{display:flex;align-items:center;gap:14px}
-.datos-lote b{flex:none;min-width:150px;padding:9px 16px;border-radius:999px;background:var(--verde);color:#fff;font-weight:600;font-size:14.5px;text-align:center;font-variant-numeric:tabular-nums}
-.datos-lote span{color:var(--tinta-2);font-size:15px}
-.aviso{margin:22px 0 0;padding:12px 16px;border-radius:var(--r-chico);background:#FBF3DF;color:#5F4B12;font-size:14px;line-height:1.5}
-.aviso b{color:#3F310A}
-.plano{background:#fff;border-radius:var(--r-tarjeta);padding:12px;min-width:0}
-.plano__lienzo{position:relative}
-.plano svg{display:block;width:100%;height:auto;border-radius:14px}
-.lote{cursor:pointer}
-.lote:hover path{filter:brightness(1.08)}
-.lote:focus-visible{outline:none}
-.lote:focus-visible path,.lote.is-activo path{stroke:var(--tinta);stroke-width:3}
-.marcador{position:absolute;width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.25);display:grid;place-items:center;transform:translate(-50%,-115%);left:50%;top:50%;transition:left .9s var(--curva),top .9s var(--curva),opacity .3s;pointer-events:none;opacity:0}
-.marcador::after{content:"";position:absolute;bottom:-6px;left:50%;width:12px;height:12px;background:#fff;transform:translateX(-50%) rotate(45deg);border-radius:2px}
-.marcador img{width:26px;position:relative;z-index:1}
-.marcador.is-visible{opacity:1}
-.leyenda{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;padding:12px 6px 2px;font-size:14px;color:var(--tinta-2)}
-.leyenda span{display:inline-flex;align-items:center;gap:8px}
-.leyenda i{width:12px;height:12px;border-radius:4px;display:inline-block}
-.leyenda label{margin-left:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--tinta);cursor:pointer}
-.leyenda input{accent-color:var(--verde);width:17px;height:17px}
-.ficha{margin-top:24px;background:#fff;border-radius:var(--r-tarjeta);padding:22px;display:grid;gap:14px}
-.ficha__vacia b{display:block;font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:28px;line-height:1.05}
-.ficha__vacia p{margin:6px 0 0;color:var(--tinta-2);font-size:15px}
-.ficha__num{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-.ficha__num small{display:block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gris)}
-.ficha__num b{font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:56px;line-height:.95}
-.estado{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
-.estado::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
-.estado--disponible{background:#EEF3E5;color:#4D6B2C}
-.estado--reservado{background:#F8EEDA;color:#82601E}
-.estado--vendido{background:#F0EDE8;color:#6F675E}
-.filas{margin:0;padding:0;list-style:none}
-.filas li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--linea);font-size:15px}
-.filas li span{color:var(--tinta-2)}
-.filas li b{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
-.elegir select{appearance:none;-webkit-appearance:none;width:100%;border:1px solid var(--linea);border-radius:999px;padding:12px 44px 12px 18px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D1B17' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 16px center/16px no-repeat;font-weight:600;font-size:15px}
-
-/* Financiación: bloque verde */
-.verde{background:var(--verde);color:var(--sobre-verde);border-radius:var(--r-marco)}
-.verde h2{color:#fff}
-.verde h2 em{color:var(--sobre-verde-2)}
-.verde .ceja{color:var(--sobre-verde-2)}
-.verde .texto{color:var(--sobre-verde)}
-.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start;padding:clamp(36px,6vw,80px) clamp(22px,5vw,72px)}
-.sim form{margin-top:30px;display:grid;gap:22px}
-.ctrl{display:grid;gap:8px}
-.ctrl__cab{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;font-size:14px}
-.ctrl__cab label,.ctrl__cab .et{font-weight:600;color:#fff}
-.ctrl__cab small{color:var(--sobre-verde-2);font-size:13.5px}
-.monto{display:flex;align-items:baseline;gap:6px;border-bottom:1px solid rgba(255,255,255,.3);padding:0 0 8px}
-.monto:focus-within{border-color:#fff}
-.monto span{font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:30px;color:var(--sobre-verde-2)}
-.monto input{width:100%;min-width:0;border:0;outline:0;background:transparent;font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:clamp(34px,3.6vw,46px);color:#fff;font-variant-numeric:tabular-nums;padding:0;line-height:1.1}
-.monto--chico span{font-size:24px}
-.monto--chico input{font-size:30px}
-.ctrl.is-error .monto{border-color:#FF9DB4}
-.error{font-size:13.5px;color:#FFB3C5;margin:0;font-weight:600}
-.dos{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.fijo{font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:30px;color:#fff;padding:0 0 8px;border-bottom:1px dashed rgba(255,255,255,.25);line-height:1.1}
-.segmento{display:inline-flex;padding:4px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);justify-self:start}
-.segmento button{border:0;background:transparent;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14.5px;cursor:pointer;color:var(--sobre-verde)}
-.segmento button[aria-pressed="true"]{background:#fff;color:var(--verde)}
-.rango{width:100%;accent-color:#fff;height:26px}
-.marcas{display:flex;justify-content:space-between;font-size:12.5px;color:var(--sobre-verde-2)}
-.lote-elegido{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 10px 10px 16px;border-radius:999px;background:rgba(255,255,255,.1);font-weight:600;color:#fff;font-size:14.5px}
-.lote-elegido button{border:0;background:#fff;color:var(--verde);border-radius:999px;padding:6px 12px;font-weight:600;font-size:13px;cursor:pointer}
-.resumen{background:#fff;color:var(--tinta);border-radius:var(--r-tarjeta);padding:26px}
-.resumen small{display:block;font-size:14px;color:var(--gris)}
-.resumen__cuota{display:block;font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:clamp(48px,5.4vw,72px);line-height:1;margin-top:6px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.resumen__det{margin:8px 0 14px;color:var(--tinta-2);font-size:15px}
-.cotiza{margin-top:18px;padding-top:18px;border-top:1px solid var(--linea);display:grid;gap:10px}
-.cotiza b.t{font-weight:600;font-size:16px}
-.campos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.campo{background:var(--crema);border:1px solid transparent;border-radius:16px;padding:9px 16px 7px;min-width:0;transition:border-color .2s,background .2s}
-.campo:focus-within{border-color:var(--tinta);background:#fff}
-.campo label{display:block;font-size:12.5px;color:var(--gris);font-weight:500}
-.campo input,.campo select{width:100%;border:0;outline:0;background:transparent;padding:1px 0;font-size:16px;font-weight:600;min-width:0}
-.campo select{appearance:none;-webkit-appearance:none;cursor:pointer}
-.campo input::placeholder{color:#B5AEA4;font-weight:500}
-.campo.is-error{border-color:var(--acento)}
-.form-msj{font-size:13.5px;color:var(--acento);margin:0;min-height:1.2em;font-weight:600}
-.legal{font-size:12.5px;color:var(--gris);margin:14px 0 0}
-.verde .legal{color:var(--sobre-verde-2);padding:0 clamp(22px,5vw,72px) clamp(28px,4vw,44px);margin:0}
-
-/* Recorrido y portafolio */
-.doble{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:14px}
-.tour{position:relative;border-radius:var(--r-tarjeta);overflow:hidden;min-height:480px;color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:28px}
-.tour img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--curva)}
-.tour:hover img{transform:scale(1.04)}
-.tour::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,0) 40%,rgba(0,0,0,.6))}
-.tour>*:not(img){position:relative;z-index:1}
-.tour__sello{align-self:flex-start;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600}
-.tour__centro{position:absolute!important;left:50%;top:50%;transform:translate(-50%,-50%);width:118px;height:118px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:36px}
-.tour__centro::before{content:"";position:absolute;inset:-12px;border-radius:50%;border:1px solid rgba(255,255,255,.5);animation:latido 2.6s ease-out infinite}
-@keyframes latido{from{transform:scale(.9);opacity:1}to{transform:scale(1.25);opacity:0}}
-.tour h3{font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:clamp(30px,3vw,40px);line-height:1.05;max-width:16ch}
-.tour p{margin:8px 0 0;max-width:40ch;color:rgba(255,255,255,.88);font-size:15px}
-.portafolio{background:#fff;border-radius:var(--r-tarjeta);padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;gap:14px}
-.portafolio h3{font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:clamp(30px,3vw,40px);line-height:1.05}
-.portafolio ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.portafolio li{display:flex;gap:10px;align-items:flex-start;color:var(--tinta-2);font-size:15px}
-.portafolio li svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--disponible)}
-.portafolio form{margin-top:auto;display:grid;gap:8px}
-
-/* Galería */
-.galeria__cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}
-.filtros{display:flex;flex-wrap:wrap;gap:6px}
-.filtros button{border:1px solid var(--linea);background:transparent;border-radius:999px;padding:8px 16px;font-weight:600;font-size:14px;cursor:pointer}
-.filtros button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
-.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:12px}
-.foto{position:relative;overflow:hidden;border-radius:var(--r-tarjeta);border:0;padding:0;cursor:pointer;color:#fff;text-decoration:none;text-align:left;background:var(--crema-2)}
-.foto img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--curva)}
-.foto:hover img{transform:scale(1.05)}
-.foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.55));pointer-events:none}
-.foto__pie{position:absolute;z-index:1;left:16px;right:16px;bottom:14px;font-weight:600;font-size:14.5px;line-height:1.3}
-.foto__chip{position:absolute;z-index:1;left:14px;top:14px;padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:600}
-.foto--g{grid-column:span 2;grid-row:span 2}
-.foto--a{grid-row:span 2}
-.foto .play{position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center}
-.foto .play svg{width:20px;height:20px;margin-left:3px}
-
-/* Ubicación */
-.ubica{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:14px;align-items:stretch}
-.mapa{position:relative;border-radius:var(--r-tarjeta);overflow:hidden;min-height:440px;display:block;background:#EDEAE3}
-.mapa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.75)}
-.mapa__pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:8px}
-.mapa__etq{background:var(--verde);color:#fff;padding:9px 16px;border-radius:999px;font-weight:600;font-size:14px;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.2)}
-.mapa__punto{width:22px;height:22px;border-radius:50%;background:var(--acento);border:4px solid #fff;box-shadow:0 0 0 0 rgba(210,58,99,.5);animation:pulso 2.2s ease-out infinite}
-@keyframes pulso{to{box-shadow:0 0 0 22px rgba(210,58,99,0)}}
-.mapa__cred{position:absolute;right:10px;bottom:8px;font-size:11px;color:#6F675E;background:rgba(255,255,255,.8);padding:2px 8px;border-radius:999px}
-.ubica__info{background:#fff;border-radius:var(--r-tarjeta);padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;gap:6px}
-.ubica__info h3{font-family:var(--f-sans);font-weight:600;letter-spacing:-.03em;font-size:clamp(30px,3vw,38px);line-height:1.05}
-.ubica__info .filas{margin:14px 0 20px}
-.ubica__info .btn{margin-top:auto;align-self:flex-start}
-.coord{font-size:13px;color:var(--gris);letter-spacing:.06em;font-variant-numeric:tabular-nums}
-
-/* Preguntas */
-.preguntas{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:start}
-.asesor{position:relative;border-radius:var(--r-tarjeta);overflow:hidden;min-height:520px;display:flex;align-items:flex-end;padding:16px;margin-top:28px}
-.asesor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.asesor__tarjeta{position:relative;background:#fff;border-radius:18px;padding:18px;display:grid;gap:10px;width:100%}
-.asesor__tarjeta b{display:block;font-weight:600}
-.asesor__tarjeta p{margin:0;color:var(--tinta-2);font-size:14.5px}
-.faq details{border-bottom:1px solid var(--linea)}
-.faq details:first-child{border-top:1px solid var(--linea)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 0;font-weight:600;font-size:16.5px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--linea);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D1B17' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .3s var(--curva),background-color .3s}
-.faq details[open] summary::after{transform:rotate(45deg);background-color:#fff}
-.faq details p{margin:0 0 20px;color:var(--tinta-2);max-width:60ch}
-
-/* Contacto: formulario de vidrio sobre foto */
-.contacto{position:relative;border-radius:var(--r-marco);overflow:hidden;color:#fff;padding:clamp(40px,6vw,80px) clamp(22px,5vw,72px)}
-.contacto__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.contacto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,22,17,.72),rgba(14,22,17,.25))}
-.contacto__in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:center}
-.contacto h2{color:#fff}
-.contacto h2 em{color:rgba(255,255,255,.78)}
-.contacto .ceja{color:rgba(255,255,255,.78)}
-.contacto .texto{color:rgba(255,255,255,.88)}
-.contacto__wa{margin-top:26px}
-.panel-form{background:rgba(255,255,255,.9);color:var(--tinta);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--r-tarjeta);padding:clamp(20px,3vw,30px);display:grid;gap:12px}
-.pestanas{display:flex;padding:4px;border-radius:999px;background:var(--crema);justify-self:start}
-.pestanas button{border:0;background:transparent;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14.5px;cursor:pointer;color:var(--tinta-2)}
-.pestanas button[aria-selected="true"]{background:var(--verde);color:#fff}
-.panel-form form{display:grid;gap:10px}
-.panel-form .campo{background:#fff;border-color:var(--linea)}
-.opciones{display:flex;flex-wrap:wrap;gap:6px}
-.opciones label{position:relative;cursor:pointer}
-.opciones input{position:absolute;opacity:0;pointer-events:none}
-.opciones span{display:inline-block;padding:9px 16px;border-radius:999px;border:1px solid var(--linea);background:#fff;font-weight:600;font-size:14px}
-.opciones input:checked+span{background:var(--verde);border-color:var(--verde);color:#fff}
-.opciones input:focus-visible+span{outline:2px solid var(--tinta);outline-offset:2px}
-.consentimiento{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--tinta-2);cursor:pointer;line-height:1.45}
-.consentimiento input{width:17px;height:17px;margin-top:1px;accent-color:var(--verde);flex:none}
-.consentimiento.is-error{color:var(--acento)}
-
-/* Pie */
-.pie{padding-block:56px 28px}
-.pie__in{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:32px}
-.pie__marca img{height:110px;width:auto}
-.pie__marca p{color:var(--tinta-2);font-size:14.5px;margin:14px 0 0;max-width:34ch}
-.pie h3{font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gris);margin-bottom:14px}
-.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px}
-.pie li{min-width:0;overflow-wrap:anywhere}
-.pie a{text-decoration:none}
-.pie a:hover{text-decoration:underline}
-.redes{display:flex;gap:8px}
-.redes a{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center}
-.redes svg{width:19px;height:19px}
-.pie__legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:44px;padding-top:20px;border-top:1px solid var(--linea);font-size:13.5px;color:var(--gris)}
-.pie__legal b{color:var(--tinta)}
-
-.wa-flota{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:var(--whatsapp);color:var(--whatsapp-tinta);display:grid;place-items:center;box-shadow:0 14px 30px rgba(6,42,23,.28)}
-.wa-flota svg{width:28px;height:28px}
-.barra-movil{display:none}
-
-/* Visor */
-.visor{border:0;padding:0;max-width:none;max-height:none;width:100%;height:100%;background:rgba(15,18,16,.95);color:#fff}
-.visor::backdrop{background:rgba(15,18,16,.6)}
-.visor__in{height:100%;display:grid;grid-template-rows:auto 1fr auto;padding:max(14px,env(safe-area-inset-top,0px)) max(14px,env(safe-area-inset-right,0px)) max(14px,env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px))}
-.visor__cab{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14.5px;color:#D9D4CC}
-.visor__img{display:grid;place-items:center;min-height:0;padding:12px 0}
-.visor__img img{max-height:100%;max-width:100%;width:auto;object-fit:contain;border-radius:14px}
-.visor__pie{display:flex;justify-content:center;gap:10px}
-.visor button{width:50px;height:50px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer}
-.visor button svg{width:20px;height:20px}
-
-/* Responsivo */
-@media (max-width:1180px){
-  .cab__nav{display:none}
-  .cab__menu{display:grid}
-  .cab__acc{margin-left:auto}
-  .cab{position:relative}
-  .cab.is-abierto .cab__nav{display:grid;position:absolute;top:100%;left:12px;right:12px;margin:0;background:#fff;border-radius:22px;padding:10px;z-index:20;box-shadow:0 20px 40px rgba(0,0,0,.12)}
-  .cab.is-abierto .cab__nav a{padding:13px 16px;font-size:16px}
-}
-@media (max-width:1020px){
-  .intro{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .intro .lista-fina{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 24px}
-  .intro .lista-fina li:first-child{padding-top:16px}
-  .incluye{grid-template-columns:1fr 1fr}
-  .incluye div:nth-child(3){border-left:0}
-  .bento{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
-@media (max-width:900px){
-  .hero__cuerpo{grid-template-columns:minmax(0,1fr)}
-  .cifras-vidrio{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .razones__in,.lotes,.sim,.doble,.ubica,.preguntas,.contacto__in{grid-template-columns:minmax(0,1fr)}
-  .asesor{min-height:380px}
-  .pie__in{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .pie__marca{grid-column:1/-1}
-}
-@media (max-width:720px){
-  body{font-size:16px}
-  .cab{padding:12px}
-  .cab__tel,.cab__acc .btn{display:none}
-  .hero{min-height:auto}
-  .hero__cuerpo{padding:120px 18px 156px}
-  .hero__chip{margin:16px 0 0 16px;font-size:12.5px}
-  .cab__logo img{height:58px}
-  .hero h1{font-size:34px}
-  .vidrio{padding:10px 12px;border-radius:14px}
-  .vidrio b{font-size:28px}
-  .vidrio span{font-size:12px}
-  .hero__pie{left:12px;right:12px;transform:none;flex-direction:column;padding:10px 10px 0;border-radius:22px 22px 0 0}
-  .hero__pie .btn{justify-content:space-between}
-  .hero__pie::before,.hero__pie::after{display:none}
-  .intro{grid-template-columns:minmax(0,1fr)}
-  .intro .lista-fina{grid-template-columns:minmax(0,1fr)}
-  .intro__foto{min-height:340px}
-  .cifras{grid-template-columns:1fr 1fr}
-  .cifras div:nth-child(3){border-left:0;padding-left:0}
-  .cifras div:nth-child(n+3){border-top:1px solid var(--linea);margin-top:22px}
-  .razones__grid,.incluye{grid-template-columns:minmax(0,1fr)}
-  .incluye div{border-left:0;border-top:1px solid var(--linea)}
-  .incluye div:first-child{border-top:0}
-  .datos-lote b{min-width:132px}
-  .plano{padding:6px}
-  .marcador{width:32px;height:32px}
-  .marcador img{width:20px}
-  .leyenda label{margin-left:0}
-  .dos,.campos{grid-template-columns:minmax(0,1fr)}
-  .tour{min-height:400px}
-  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
-  .foto--g{grid-column:1/-1}
-  .mapa{min-height:340px}
-  .wa-flota{display:none}
-  .barra-movil{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(243,239,232,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--linea)}
-  .barra-movil .btn{flex:1;min-height:50px;justify-content:center;padding:0 14px}
-  .pie{padding-bottom:100px}
-  .pie__in{grid-template-columns:minmax(0,1fr)}
-}
-@media (max-width:720px){
-  .btn{white-space:normal;max-width:100%}
-  .pestanas{justify-self:stretch}
-  .pestanas button{flex:1;padding:9px 10px;font-size:14px;line-height:1.25}
-  .panel-form,.contacto__in>div{min-width:0}
-  .contacto{padding-inline:14px}
-}
-@media (max-width:360px){
-  .vidrio b{font-size:24px}
-  .datos-lote li{flex-direction:column;align-items:flex-start;gap:4px}
-  .segmento button{padding:8px 13px}
-  .resumen__cuota{font-size:42px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  html{scroll-behavior:auto}
-}
-</style>
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body data-pagina="index">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
   <symbol id="i-der" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -491,397 +34,224 @@ h3{font-family:var(--f-sans);font-weight:600;font-size:18px;line-height:1.3}
   <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8.1v3h2.5V21z"/></symbol>
   <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></g></symbol>
 </svg>
-
 <a class="saltar" href="#contenido">Ir al contenido</a>
-
+<div class="cab-envoltura" id="cab-env">
 <header class="cab" id="cab">
-  <a class="cab__logo" href="#inicio" aria-label="Condominio Mirador de Anapoima, inicio"><img src="fotos/logo.webp" alt="Condominio Mirador de Anapoima" width="356" height="400"></a>
-  <nav class="cab__nav" id="menu" aria-label="Secciones">
-    <a href="#proyecto">El proyecto</a>
-    <a href="#lotes">Lotes disponibles</a>
-    <a href="#financiacion">Financiación</a>
-    <a href="#galeria">Galería</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#preguntas">Preguntas</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <a class="cab__logo" href="index.html" aria-label="Condominio Mirador de Anapoima, inicio"><img src="fotos/logo.webp" alt="Condominio Mirador de Anapoima" width="356" height="400"></a>
+  <nav class="cab__nav" id="menu" aria-label="Páginas"><a href="index.html" aria-current="page">Inicio</a><a href="proyecto.html">El proyecto</a><a href="lotes.html">Lotes</a><a href="financiacion.html">Financiación</a><a href="galeria.html">Galería</a><a href="ubicacion.html">Ubicación</a><a href="contacto.html">Contacto</a></nav>
   <div class="cab__acc">
     <a class="cab__tel" data-wa="Hola, vengo de la página del Condominio Mirador de Anapoima y quiero más información." data-donde="cabecera" href="#"><svg><use href="#i-wa"/></svg>318 333 4706</a>
-    <a class="btn btn--oscuro" href="#contacto">Agenda tu visita<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
+    <a class="btn btn--oscuro" href="contacto.html">Agenda tu visita<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
     <button class="cab__menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><svg><use href="#i-menu"/></svg></button>
   </div>
 </header>
-
+</div>
 <main id="contenido">
 
-<!-- 1. Portada -->
 <div class="marco">
-<section class="hero sobre-foto" id="inicio" aria-labelledby="titular">
-  <img class="hero__foto" src="fotos/panoramica.webp" srcset="fotos/panoramica-900.webp 900w, fotos/panoramica.webp 2000w" sizes="100vw" alt="Vista desde el condominio hacia el casco urbano de Anapoima y las montañas" width="2000" height="946" fetchpriority="high">
-  <span class="hero__chip vidrio"><img src="fotos/colibri.png" alt="" width="172" height="200">Condominio campestre · Anapoima, Cundinamarca</span>
+<section class="hero sobre-foto" aria-labelledby="titular">
+  <img class="hero__foto" data-parallax src="fotos/panoramica.webp" srcset="fotos/panoramica-900.webp 900w, fotos/panoramica.webp 2000w" sizes="100vw" alt="Vista desde el condominio hacia el casco urbano de Anapoima y las montañas" width="2000" height="946" fetchpriority="high">
+  <span class="hero__chip vidrio entra"><img src="fotos/colibri.png" alt="" width="172" height="200">Condominio campestre · Anapoima, Cundinamarca</span>
   <div class="hero__cuerpo">
     <div>
-      <h1 id="titular">Tu lugar en <em>Anapoima</em></h1>
-      <p class="hero__lead">Un espacio para disfrutar la tranquilidad, la naturaleza y construir el futuro que sueñas.</p>
+      <h1 id="titular" class="entra" style="--d:.1s">Tu lugar en <em>Anapoima</em></h1>
+      <p class="hero__lead entra" style="--d:.25s">Un espacio para disfrutar la tranquilidad, la naturaleza y construir el futuro que sueñas.</p>
     </div>
     <div class="cifras-vidrio" aria-label="Datos del proyecto">
-      <div class="vidrio"><b>5 min</b><span>del parque principal</span></div>
-      <div class="vidrio"><b>70</b><span>lotes desde 1.000 m²</span></div>
-      <div class="vidrio"><b>28 °C</b><span>clima promedio</span></div>
+      <div class="vidrio entra" style="--d:.35s"><b>5 min</b><span>del parque principal</span></div>
+      <div class="vidrio entra" style="--d:.45s"><b data-contar="70">70</b><span>lotes desde 1.000 m²</span></div>
+      <div class="vidrio entra" style="--d:.55s"><b>28 °C</b><span>clima promedio</span></div>
     </div>
   </div>
   <div class="hero__pie">
-    <a class="btn btn--oscuro" href="#lotes">Conoce los lotes disponibles<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
+    <a class="btn btn--oscuro" href="lotes.html">Conoce los lotes disponibles<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
     <a class="btn btn--wa" data-wa="Hola, vengo de la página del Condominio Mirador de Anapoima y quiero agendar una visita al proyecto." data-donde="portada" href="#">Agenda tu visita por WhatsApp<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a>
   </div>
 </section>
 </div>
 
-<!-- 2. Conoce Mirador -->
-<section class="seccion carril" id="proyecto" aria-labelledby="t-proyecto">
-  <div class="intro__titulo">
+<div class="cinta" aria-hidden="true"><div class="cinta__pista">
+  <span>Escritura individual</span><i></i><span>Portería con control de acceso</span><i></i><span>Lotes desde 1.000 m²</span><i></i><span>Vista al casco urbano</span><i></i><span>Zonas verdes y paisajismo</span><i></i><span>Senderos ecológicos</span><i></i><span>A 5 minutos del parque principal</span><i></i><span>Financiación directa con el proyecto</span><i></i><span>Escritura individual</span><i></i><span>Portería con control de acceso</span><i></i><span>Lotes desde 1.000 m²</span><i></i><span>Vista al casco urbano</span><i></i><span>Zonas verdes y paisajismo</span><i></i><span>Senderos ecológicos</span><i></i><span>A 5 minutos del parque principal</span><i></i><span>Financiación directa con el proyecto</span><i></i>
+</div></div>
+
+
+<section class="dia" id="dia" aria-labelledby="t-dia">
+  <div class="dia__fijo">
+    <img class="dia__foto" src="fotos/panoramica.webp" srcset="fotos/panoramica-900.webp 900w, fotos/panoramica.webp 2000w" sizes="100vw" alt="Vista desde el condominio hacia el pueblo de Anapoima" width="2000" height="946" loading="lazy">
+    <div class="dia__capa dia__capa--amanecer"></div>
+    <div class="dia__capa dia__capa--mediodia"></div>
+    <div class="dia__capa dia__capa--atardecer"></div>
+    <div class="dia__capa dia__capa--noche"></div>
+    <div class="dia__luces" id="dia-luces" aria-hidden="true"></div>
+    <span class="dia__astro" id="dia-astro" aria-hidden="true"></span>
+    <div class="dia__cab">
+      <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Un día en tu casa en Mirador</p>
+      <h2 id="t-dia">Desde aquí, <em>el día se ve pasar</em></h2>
+    </div>
+    <div class="dia__textos">
+      <article class="dia__momento is-activo"><span class="dia__hora">6:00 a. m. · Amanecer</span><h3>El café en tu balcón, con el pueblo despertando abajo</h3><p>La pendiente del terreno abre la vista hacia el casco urbano de Anapoima.</p></article>
+      <article class="dia__momento"><span class="dia__hora">12:00 m. · Mediodía</span><h3>28 °C para disfrutar la piscina de tu casa</h3><p>El clima promedio de Anapoima, a menos de dos horas de Bogotá.</p></article>
+      <article class="dia__momento"><span class="dia__hora">5:30 p. m. · Atardecer</span><h3>El atardecer desde tu terraza</h3><p>Lotes pensados para casas con balcones grandes, terrazas y piscinas infinitas.</p></article>
+      <article class="dia__momento"><span class="dia__hora">8:00 p. m. · Noche</span><h3>Las luces del pueblo desde tu mirador</h3><p>Y el parque principal a 5 minutos, cuando quieras bajar.</p></article>
+    </div>
+    <ol class="dia__reloj" aria-hidden="true"><li>Amanecer</li><li>Mediodía</li><li>Atardecer</li><li>Noche</li><li class="dia__avance" id="dia-avance"></li></ol>
+  </div>
+</section>
+
+<section class="seccion carril" aria-labelledby="t-intro">
+  <div class="intro__titulo" data-revelar>
     <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Conoce Mirador de Anapoima</p>
-    <h2 id="t-proyecto">Más que un lote, <em>el comienzo de una nueva historia</em></h2>
+    <h2 id="t-intro">Más que un lote, <em>el comienzo de una nueva historia</em></h2>
   </div>
   <div class="intro">
-    <div class="intro__txt">
+    <div class="intro__txt" data-revelar>
       <h3>Imagina despertar rodeado de naturaleza</h3>
       <p>Disfrutar la tranquilidad y tener un espacio propio para compartir con quienes más quieres. Mirador de Anapoima es un condominio campestre a 5 minutos del parque principal y a menos de dos horas de Bogotá.</p>
       <p>Son 70 lotes desde 1.000 m² en un terreno inclinado que abre la vista hacia el casco urbano: ideal para casas con balcones grandes, terrazas y piscinas infinitas.</p>
-      <a class="btn btn--oscuro" href="#lotes">Ver los lotes<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
+      <a class="btn btn--oscuro" href="proyecto.html">Conoce el proyecto<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
       <p class="intro__comer">Comercializa <b>Ortiz Expertos en Finca Raíz</b></p>
     </div>
-    <a class="intro__foto" href="https://condominiomiradordeanapoima.com/wp-content/uploads/2026/01/VID-20260107-WA0024.mp4" target="_blank" rel="noopener" data-evento="ver_video">
-      <img src="fotos/vista-pueblo.webp" srcset="fotos/vista-pueblo-900.webp 900w, fotos/vista-pueblo.webp 1600w" sizes="(max-width:720px) 100vw, 420px" alt="Lotes del condominio con el pueblo de Anapoima al fondo" width="1600" height="900" loading="lazy">
+    <a class="intro__foto" data-revelar style="--d:.1s" href="https://condominiomiradordeanapoima.com/wp-content/uploads/2026/01/VID-20260107-WA0024.mp4" target="_blank" rel="noopener" data-evento="ver_video">
+      <img data-parallax src="fotos/vista-pueblo.webp" srcset="fotos/vista-pueblo-900.webp 900w, fotos/vista-pueblo.webp 1600w" sizes="(max-width:720px) 100vw, 420px" alt="Lotes del condominio con el pueblo de Anapoima al fondo" width="1600" height="900" loading="lazy">
       <span class="intro__play"><span><svg><use href="#i-play"/></svg></span><span style="all:unset">Mira el video del dron<small>45 segundos · se abre en otra pestaña</small></span></span>
     </a>
-    <ul class="lista-fina">
+    <ul class="lista-fina" data-revelar style="--d:.2s">
       <li><b>Escritura individual</b><span>Cada lote se entrega a nombre del comprador.</span></li>
       <li><b>Unidad cerrada</b><span>Portería con control de acceso.</span></li>
       <li><b>Vista al pueblo</b><span>El terreno inclinado abre la vista hacia el casco urbano.</span></li>
       <li><b>Financiación directa</b><span>Pagas directo con el proyecto, hasta 12 meses.</span></li>
     </ul>
   </div>
-  <div class="cifras">
-    <div><b>70</b><span>Lotes en total</span></div>
-    <div><b>1.000 m²</b><span>Área desde</span></div>
+  <div class="cifras" data-revelar>
+    <div><b data-contar="70">70</b><span>Lotes en total</span></div>
+    <div><b><span data-contar="1000" data-miles>1.000</span> m²</b><span>Área desde</span></div>
     <div><b>&lt; 2 h</b><span>Desde Bogotá</span></div>
-    <div><b>$220 M</b><span>Precio desde</span></div>
+    <div><b>$<span data-contar="220">220</span> M</b><span>Precio desde</span></div>
   </div>
 </section>
 
-<!-- 3. Por qué Mirador -->
-<section class="marco" aria-labelledby="t-razones">
-  <div class="razones sobre-foto">
-    <img class="razones__foto" src="fotos/montanas.webp" srcset="fotos/montanas-900.webp 900w, fotos/montanas.webp 1600w" sizes="100vw" alt="" width="1600" height="900" loading="lazy">
-    <div class="razones__in carril" style="padding:0">
-      <div>
-        <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Por qué elegirnos</p>
-        <h2 id="t-razones">¿Por qué elegir <em>Mirador?</em></h2>
-      </div>
-      <div class="razones__grid">
-        <div class="vidrio razon"><svg><use href="#i-hoja"/></svg><h3>Naturaleza y tranquilidad</h3><p>Disfruta de un ambiente campestre y de un entorno natural.</p></div>
-        <div class="vidrio razon"><svg><use href="#i-casa"/></svg><h3>Construye tus sueños</h3><p>Proyecta tu espacio según tus sueños y necesidades.</p></div>
-        <div class="vidrio razon"><svg><use href="#i-pin"/></svg><h3>Cerca de todo</h3><p>A 5 minutos del parque principal y del casco urbano de Anapoima.</p></div>
-        <div class="vidrio razon"><svg><use href="#i-sube"/></svg><h3>Una inversión para el futuro</h3><p>Adquiere un espacio para construir patrimonio.</p></div>
-      </div>
-    </div>
+<section class="carril pila-seccion" aria-labelledby="t-razones">
+  <div class="pila__cab" data-revelar>
+    <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Cuatro razones</p>
+    <h2 id="t-razones">¿Por qué elegir <em>Mirador?</em></h2>
   </div>
-</section>
-<div class="carril">
-  <div class="incluye" aria-label="El condominio incluye">
-    <div><i><svg><use href="#i-doc"/></svg></i><b>Escritura individual</b></div>
-    <div><i><svg><use href="#i-escudo"/></svg></i><b>Portería con control de acceso</b></div>
-    <div><i><svg><use href="#i-arbol"/></svg></i><b>Zonas verdes y paisajismo</b></div>
-    <div><i><svg><use href="#i-sendero"/></svg></i><b>Senderos ecológicos</b></div>
-  </div>
-</div>
-
-<!-- 4. Lotes -->
-<section class="seccion carril" id="lotes" aria-labelledby="t-lotes">
-  <div class="lotes">
-    <div>
-      <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Lotes disponibles</p>
-      <h2 id="t-lotes">Encuentra el lote donde <em>comienza tu sueño</em></h2>
-      <p class="texto">Toca un lote en el plano para ver su número, área y estado. Desde la ficha nos escribes por WhatsApp con el lote ya indicado.</p>
-      <ul class="datos-lote">
-        <li><b>70</b><span>lotes en total</span></li>
-        <li><b>desde 1.000 m²</b><span>área de cada lote</span></li>
-        <li><b>desde $220 M</b><span>precio de referencia</span></li>
-        <li><b>hasta 12 meses</b><span>financiación directa con el proyecto</span></li>
-      </ul>
-      <div class="ficha" aria-live="polite">
-        <div class="ficha__vacia" id="ficha-vacia">
-          <b>Elige un lote en el plano</b>
-          <p>O búscalo en la lista de disponibles.</p>
-        </div>
-        <div id="ficha-lote" hidden>
-          <div class="ficha__num"><div><small>Lote</small><b id="f-num"></b></div><span class="estado" id="f-estado"></span></div>
-          <ul class="filas" style="margin-top:10px">
-            <li><span>Área (ejemplo)</span><b id="f-area"></b></li>
-            <li><span>Precio vigente</span><b>Lo confirma tu asesor</b></li>
-          </ul>
-          <div style="display:grid;gap:8px;margin-top:16px">
-            <a class="btn btn--wa btn--ancho" id="f-wa" href="#" target="_blank" rel="noopener">Quiero información de este lote<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a>
-            <button class="btn btn--linea btn--ancho" type="button" id="f-simular">Simular la financiación<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></button>
-          </div>
-        </div>
-        <div class="elegir"><label class="sr-only" for="lista-lotes">Lotes disponibles</label><select id="lista-lotes"><option value="">Lotes disponibles</option></select></div>
-      </div>
-    </div>
-    <div>
-      <div class="plano">
-        <div class="plano__lienzo">
-          <svg id="plano" viewBox="0 0 900 560" role="group" aria-label="Plano de lotes del condominio">
-            <rect width="900" height="560" fill="#F1EDE3"/>
-            <g fill="none" stroke="#E4DECF" stroke-width="1.5">
-              <path d="M-20 80 C 180 30, 380 130, 560 60 S 860 30, 940 80"/>
-              <path d="M-20 160 C 160 110, 400 200, 600 130 S 840 110, 940 160"/>
-              <path d="M-20 240 C 180 190, 400 290, 620 210 S 850 200, 940 240"/>
-              <path d="M-20 330 C 200 280, 420 370, 640 300 S 860 300, 940 340"/>
-              <path d="M-20 420 C 220 370, 440 460, 660 390 S 860 400, 940 430"/>
-              <path d="M-20 510 C 240 460, 460 550, 680 480 S 870 490, 940 520"/>
-            </g>
-            <g id="plano-vias"></g>
-            <g id="plano-lotes"></g>
-            <g id="plano-extras"></g>
-          </svg>
-          <span class="marcador" id="marcador"><img src="fotos/colibri.png" alt="" width="172" height="200"></span>
-        </div>
-        <div class="leyenda">
-          <span><i style="background:var(--disponible)"></i>Disponible <b id="n-disp"></b></span>
-          <span><i style="background:var(--reservado)"></i>Reservado <b id="n-res"></b></span>
-          <span><i style="background:var(--vendido)"></i>Vendido <b id="n-vend"></b></span>
-          <label><input type="checkbox" id="solo-disp">Solo disponibles</label>
-        </div>
-      </div>
-      <p class="aviso" role="note"><b>Plano ilustrativo con datos de ejemplo.</b> Con el plano real y la lista de lotes del proyecto se cargan número, área, precio y estado verdaderos.</p>
-    </div>
+  <div class="pila">
+    <article class="pila__tarjeta" style="--i:0">
+      <div class="pila__txt"><span class="pila__n">01</span><h3>Naturaleza y tranquilidad</h3><p>Disfruta de un ambiente campestre y de un entorno natural, con zonas verdes, paisajismo y senderos ecológicos.</p></div>
+      <img src="fotos/senderos.webp" alt="Senderos entre la vegetación del condominio" width="1600" height="900" loading="lazy">
+    </article>
+    <article class="pila__tarjeta pila__tarjeta--verde" style="--i:1">
+      <div class="pila__txt"><span class="pila__n">02</span><h3>Construye tus sueños</h3><p>Proyecta tu espacio según tus sueños y necesidades. Puedes partir de uno de los modelos de casa del proyecto y adaptarlo a tu estilo.</p></div>
+      <img src="fotos/lote-arboles.webp" alt="Lote con árboles y pasto" width="1600" height="900" loading="lazy">
+    </article>
+    <article class="pila__tarjeta pila__tarjeta--crema" style="--i:2">
+      <div class="pila__txt"><span class="pila__n">03</span><h3>Cerca de todo</h3><p>A 5 minutos del parque principal y del casco urbano de Anapoima, y a menos de dos horas de Bogotá.</p></div>
+      <img src="fotos/vista-pueblo.webp" alt="Lotes con el pueblo de Anapoima al fondo" width="1600" height="900" loading="lazy">
+    </article>
+    <article class="pila__tarjeta" style="--i:3">
+      <div class="pila__txt"><span class="pila__n">04</span><h3>Una inversión para el futuro</h3><p>Adquiere un espacio para construir patrimonio, con escritura individual a tu nombre.</p></div>
+      <img src="fotos/valle.webp" alt="Vía interna con vista al valle" width="1600" height="900" loading="lazy">
+    </article>
   </div>
 </section>
 
-<!-- 5. Financiación -->
-<section class="marco" id="financiacion" aria-labelledby="t-sim">
-  <div class="verde">
-    <div class="sim carril" style="max-width:none">
-      <div>
-        <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Simula tu financiación</p>
-        <h2 id="t-sim">Separa tu lote y <em>paga a tu ritmo</em></h2>
-        <p class="texto">Calcula sin dejar tus datos. Si te gusta lo que ves, te enviamos una cotización personalizada.</p>
-        <form id="sim" novalidate>
-          <div class="lote-elegido" id="sim-lote" hidden><span id="sim-lote-txt"></span><button type="button" id="sim-lote-quitar">Quitar</button></div>
-          <div class="ctrl" id="c-valor">
-            <div class="ctrl__cab"><label for="s-valor">Valor del lote</label><small>Desde $220.000.000</small></div>
-            <div class="monto"><span>$</span><input id="s-valor" inputmode="numeric" value="220.000.000"></div>
-            <p class="error" id="s-valor-error" hidden></p>
-          </div>
-          <div class="dos">
-            <div class="ctrl" id="c-sep">
-              <div class="ctrl__cab"><label for="s-sep">Separación</label><small>Mín. $2.000.000</small></div>
-              <div class="monto monto--chico"><span>$</span><input id="s-sep" inputmode="numeric" value="2.000.000"></div>
-              <p class="error" id="s-sep-error" hidden></p>
-            </div>
-            <div class="ctrl">
-              <div class="ctrl__cab"><span class="et">Cuota inicial</span><small>Del proyecto</small></div>
-              <div class="fijo">$42.000.000</div>
-            </div>
-          </div>
-          <div class="ctrl">
-            <div class="ctrl__cab"><span class="et" id="et-modo">Forma de pago</span></div>
-            <div class="segmento" role="group" aria-labelledby="et-modo"><button type="button" data-modo="financiado" aria-pressed="true">Financiado</button><button type="button" data-modo="contado" aria-pressed="false">De contado</button></div>
-          </div>
-          <div class="ctrl" id="bloque-plazo">
-            <div class="ctrl__cab"><label for="s-plazo">Plazo para el saldo</label><small id="s-plazo-txt">12 meses</small></div>
-            <input class="rango" id="s-plazo" type="range" min="1" max="12" step="1" value="12">
-            <div class="marcas"><span>1 mes</span><span>12 meses</span></div>
-          </div>
-        </form>
-      </div>
-      <div class="resumen" aria-live="polite">
-        <small id="cuota-et">Tu cuota mensual aproximada</small>
-        <b class="resumen__cuota" id="cuota-valor">$0</b>
-        <p class="resumen__det" id="cuota-detalle"></p>
-        <ul class="filas" id="sim-filas"></ul>
-        <form class="cotiza" id="cotiza" novalidate>
-          <b class="t">Quiero una cotización personalizada</b>
-          <div class="campos">
-            <div class="campo"><label for="c-nombre">Nombre completo</label><input id="c-nombre" autocomplete="name" placeholder="Tu nombre"></div>
-            <div class="campo"><label for="c-tel">WhatsApp</label><input id="c-tel" inputmode="tel" autocomplete="tel-national" placeholder="321 123 4567"></div>
-          </div>
-          <p class="form-msj" id="c-msj"></p>
-          <a class="btn btn--oscuro btn--ancho" id="c-enviar" href="#" target="_blank" rel="noopener">Recibir mi cotización<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a>
-        </form>
-      </div>
-    </div>
-    <p class="legal">Simulación sin intereses ni otros cargos. No es una oferta vinculante: las condiciones las confirma el proyecto. La compra se formaliza con el pago de la separación en la cuenta del proyecto; tu asesor te da los datos.</p>
+<section class="seccion vitrina-seccion" aria-labelledby="t-vitrina">
+  <div class="carril vitrina__cab" data-revelar>
+    <div><p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Recorre Mirador</p><h2 id="t-vitrina">Encuentra tu <em>vista favorita</em></h2></div>
+    <div class="vitrina__nav"><button type="button" data-vitrina="-1" aria-label="Anterior"><svg><use href="#i-izq"/></svg></button><button type="button" data-vitrina="1" aria-label="Siguiente"><svg><use href="#i-der"/></svg></button></div>
   </div>
+  <div class="vitrina" id="vitrina">
+    <div class="vitrina__pista">
+      <a class="vitrina__item" href="galeria.html"><img src="fotos/panoramica.webp" alt="" width="2000" height="946" loading="lazy"><span class="vitrina__chip vidrio">Vistas panorámicas</span><span class="vitrina__pie"><b>Hacia el casco urbano</b><span>Desde la parte alta del condominio</span></span></a>
+      <a class="vitrina__item" href="lotes.html"><img src="fotos/lotes-verdes.webp" alt="" width="1600" height="900" loading="lazy"><span class="vitrina__chip vidrio">Lotes</span><span class="vitrina__pie"><b>Lotes desde 1.000 m²</b><span>Terreno inclinado con vista</span></span></a>
+      <a class="vitrina__item" href="galeria.html"><img src="fotos/valle.webp" alt="" width="1600" height="900" loading="lazy"><span class="vitrina__chip vidrio">Vías internas</span><span class="vitrina__pie"><b>Vías con vista al valle</b><span>Acceso a cada lote</span></span></a>
+      <a class="vitrina__item" href="galeria.html"><img src="fotos/senderos.webp" alt="" width="1600" height="900" loading="lazy"><span class="vitrina__chip vidrio">Zonas verdes</span><span class="vitrina__pie"><b>Senderos ecológicos</b><span>Entre la vegetación</span></span></a>
+      <a class="vitrina__item" href="galeria.html"><img src="fotos/mirador-pueblo.webp" alt="" width="1600" height="900" loading="lazy"><span class="vitrina__chip vidrio">Parte alta</span><span class="vitrina__pie"><b>Un balcón natural</b><span>Para casas con terrazas</span></span></a>
+    </div>
+  </div>
+  <div class="vitrina__puntos" id="vitrina-puntos"></div>
 </section>
 
-<!-- Recorrido 360 + portafolio -->
-<section class="seccion carril" id="recorrido" aria-label="Recorrido virtual y portafolio">
+<section class="carril bloques" aria-label="Lotes, financiación y ubicación">
+  <a class="bloque bloque--foto" href="lotes.html" data-revelar>
+    <img data-parallax src="fotos/loma.webp" alt="" width="1600" height="900" loading="lazy">
+    <span class="bloque__chip vidrio">Plano interactivo</span>
+    <span class="bloque__txt"><b>Elige tu lote en el plano</b><span>Mira el área y el estado de cada lote y escríbenos con el número ya indicado.</span></span>
+    <span class="btn__c"><svg><use href="#i-flecha"/></svg></span>
+  </a>
+  <a class="bloque bloque--verde" href="financiacion.html" data-revelar style="--d:.1s">
+    <span class="bloque__chip">Financiación directa</span>
+    <span class="bloque__grande">Separa desde<br><b>$2.000.000</b></span>
+    <span class="bloque__txt"><span>Cuota inicial de $42.000.000 y el saldo hasta en 12 meses, directo con el proyecto.</span></span>
+    <span class="btn__c"><svg><use href="#i-flecha"/></svg></span>
+  </a>
+  <a class="bloque bloque--mapa" href="ubicacion.html" data-revelar style="--d:.2s">
+    <img src="fotos/mapa.webp" alt="" width="1100" height="760" loading="lazy">
+    <span class="mapa__pin"><span class="mapa__punto"></span></span>
+    <span class="bloque__txt bloque__txt--claro"><b>A 5 min del parque</b><span>Y a menos de 2 h de Bogotá</span></span>
+    <span class="btn__c"><svg><use href="#i-flecha"/></svg></span>
+  </a>
+</section>
+
+<section class="seccion carril" aria-label="Recorrido virtual y portafolio">
   <div class="doble">
-    <a class="tour sobre-foto" href="https://360.condominiomiradordeanapoima.com/" target="_blank" rel="noopener" data-evento="abrir_360">
-      <img src="fotos/panoramica.webp" srcset="fotos/panoramica-900.webp 900w, fotos/panoramica.webp 2000w" sizes="(max-width:900px) 100vw, 700px" alt="" width="2000" height="946" loading="lazy">
+    <a class="tour sobre-foto" href="https://360.condominiomiradordeanapoima.com/" target="_blank" rel="noopener" data-evento="abrir_360" data-revelar>
+      <img data-parallax src="fotos/panoramica.webp" srcset="fotos/panoramica-900.webp 900w, fotos/panoramica.webp 2000w" sizes="(max-width:900px) 100vw, 700px" alt="" width="2000" height="946" loading="lazy">
       <span class="tour__sello vidrio">Recorrido virtual</span>
       <span class="tour__centro vidrio">360°</span>
       <span><h3>Recorre el proyecto sin salir de casa</h3><p>Gira la vista y mira los lotes y el pueblo desde la parte alta. Se abre en otra pestaña.</p></span>
     </a>
-    <div class="portafolio">
+    <div class="portafolio" data-revelar style="--d:.1s">
       <p class="ceja" style="margin:0"><img src="fotos/colibri.png" alt="" width="172" height="200">Portafolio del proyecto</p>
-      <h3>Recibe el portafolio <em style="font-style:italic;color:var(--tinta-2)">con precios y fotos</em></h3>
+      <h3>Recibe el portafolio <em>con precios y fotos</em></h3>
       <ul>
         <li><svg><use href="#i-check"/></svg>Fotos del dron y del terreno</li>
         <li><svg><use href="#i-check"/></svg>Precios y forma de pago</li>
         <li><svg><use href="#i-check"/></svg>Ubicación y cómo llegar</li>
       </ul>
-      <form id="f-portafolio" novalidate>
-        <div class="campo"><label for="p-nombre">Nombre completo</label><input id="p-nombre" autocomplete="name" placeholder="Tu nombre"></div>
-        <div class="campo"><label for="p-tel">WhatsApp</label><input id="p-tel" inputmode="tel" autocomplete="tel-national" placeholder="321 123 4567"></div>
-        <p class="form-msj" id="p-msj"></p>
-        <a class="btn btn--oscuro btn--ancho" id="p-enviar" href="#" target="_blank" rel="noopener">Recibir el portafolio<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a>
+      <form class="js-portafolio" novalidate>
+        <div class="campo"><label for="p-nombre">Nombre completo</label><input id="p-nombre" name="nombre" autocomplete="name" placeholder="Tu nombre"></div>
+        <div class="campo"><label for="p-tel">WhatsApp</label><input id="p-tel" name="tel" inputmode="tel" autocomplete="tel-national" placeholder="321 123 4567"></div>
+        <p class="form-msj"></p>
+        <a class="btn btn--oscuro btn--ancho js-enviar" href="#" target="_blank" rel="noopener">Recibir el portafolio<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a>
       </form>
     </div>
   </div>
 </section>
 
-<!-- 6. Galería -->
-<section class="carril" id="galeria" aria-labelledby="t-galeria" style="padding-bottom:clamp(72px,9vw,120px)">
-  <div class="galeria__cab">
-    <div>
-      <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Galería</p>
-      <h2 id="t-galeria">Así se ve <em>Mirador</em></h2>
-    </div>
-    <div class="filtros" id="filtros" role="group" aria-label="Filtrar la galería"></div>
-  </div>
-  <div class="bento" id="bento"></div>
-</section>
-
-<!-- 7. Ubicación -->
-<section class="carril" id="ubicacion" aria-labelledby="t-ubica" style="padding-bottom:clamp(72px,9vw,120px)">
-  <div class="intro__titulo" style="margin-bottom:clamp(32px,4vw,48px)">
-    <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Ubicación</p>
-    <h2 id="t-ubica">A pocos minutos del <em>corazón de Anapoima</em></h2>
-  </div>
-  <div class="ubica">
-    <a class="mapa" href="https://www.google.com/maps?q=4.5575911,-74.5475816" target="_blank" rel="noopener" data-evento="abrir_mapa" aria-label="Abrir la ubicación del condominio en Google Maps">
-      <img src="fotos/mapa.webp" alt="Mapa de la región de Anapoima, Cundinamarca" width="1100" height="760" loading="lazy">
-      <span class="mapa__pin"><span class="mapa__etq">Condominio Mirador de Anapoima</span><span class="mapa__punto"></span></span>
-      <span class="mapa__cred">© OpenStreetMap</span>
-    </a>
-    <div class="ubica__info">
-      <h3>Un lugar campestre cerca de todo</h3>
-      <p class="texto" style="margin-top:6px">Disfruta la tranquilidad sin alejarte de las comodidades del municipio.</p>
-      <ul class="filas">
-        <li><span>Parque principal de Anapoima</span><b>5 min</b></li>
-        <li><span>Bogotá</span><b>Menos de 2 h</b></li>
-        <li><span>Clima promedio</span><b>28 °C</b></li>
-      </ul>
-      <p class="coord">4°33′27″ N · 74°32′51″ O</p>
-      <a class="btn btn--oscuro" href="https://www.google.com/maps/dir/?api=1&amp;destination=4.5575911,-74.5475816" target="_blank" rel="noopener" data-evento="abrir_mapa">Cómo llegar<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
-    </div>
-  </div>
-</section>
-
-<!-- 8 y 11. Preguntas y asesor -->
-<section class="carril" id="preguntas" aria-labelledby="t-faq" style="padding-bottom:clamp(72px,9vw,120px)">
-  <div class="preguntas">
-    <div>
-      <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Preguntas frecuentes</p>
-      <h2 id="t-faq">Resolvemos <em>tus dudas</em></h2>
-      <div class="asesor">
-        <img src="fotos/lote-arboles.webp" srcset="fotos/lote-arboles-900.webp 900w, fotos/lote-arboles.webp 1600w" sizes="(max-width:900px) 100vw, 480px" alt="" width="1600" height="900" loading="lazy">
-        <div class="asesor__tarjeta">
-          <b>Estamos aquí para ayudarte a encontrar tu lote ideal</b>
-          <p>Un asesor te acompaña desde la primera consulta hasta que conozcas y elijas tu lote.</p>
-          <a class="btn btn--wa btn--ancho" data-wa="Hola, vengo de la página del Condominio Mirador de Anapoima y quiero hablar con un asesor." data-donde="asesor" href="#">Hablar con un asesor<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a>
-        </div>
-      </div>
-    </div>
-    <div class="faq">
-      <details open><summary>¿Dónde está ubicado Mirador de Anapoima?</summary><p>En Anapoima, Cundinamarca, a 5 minutos del parque principal y a menos de dos horas de Bogotá.</p></details>
-      <details><summary>¿Qué áreas tienen los lotes?</summary><p>Los lotes son desde 1.000 m². En el plano ves el área de cada uno.</p></details>
-      <details><summary>¿Cuáles son los precios vigentes?</summary><p>Los lotes están desde $220.000.000. El precio de cada lote te lo confirma tu asesor.</p></details>
-      <details><summary>¿Cómo puedo financiar mi lote?</summary><p>Directo con el proyecto: separas con $2.000.000, completas la cuota inicial de $42.000.000 y pagas el saldo hasta en 12 meses. En el simulador ves el valor de cada cuota.</p></details>
-      <details><summary>¿Qué servicios tiene el condominio?</summary><p>Portería con control de acceso, zonas verdes y paisajismo, y senderos ecológicos.</p></details>
-      <details><summary>¿Los lotes cuentan con escritura?</summary><p>Sí. Cada lote se entrega con escritura individual a nombre del comprador.</p></details>
-      <details><summary>¿Puedo construir mi casa? ¿Qué condiciones aplican?</summary><p>Sí. Puedes partir de uno de los modelos de casa propuestos por el proyecto y adaptarlo a tu estilo y necesidades. Tu asesor te explica las condiciones de construcción.</p></details>
-      <details><summary>¿Cómo puedo separar un lote?</summary><p>Con $2.000.000, que se pagan en la cuenta del proyecto. Tu asesor te da los datos y te acompaña en el proceso.</p></details>
-      <details><summary>¿Cómo agendo una visita?</summary><p>Con el formulario de visita de esta página o por WhatsApp. Las visitas son con cita previa; si no puedes venir, te mostramos el proyecto por videollamada.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- 9 y 10. Contacto: visita y asesoría -->
-<section class="marco" id="contacto" aria-labelledby="t-conv">
-  <div class="contacto sobre-foto">
-    <img class="contacto__foto" src="fotos/valle.webp" srcset="fotos/valle-900.webp 900w, fotos/valle.webp 1600w" sizes="100vw" alt="" width="1600" height="900" loading="lazy">
-    <div class="contacto__in carril" style="padding:0">
-      <div>
-        <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Agenda tu visita</p>
-        <h2 id="t-conv">El lugar de tus sueños <em>merece ser conocido</em></h2>
-        <p class="texto">Ven, recorre el proyecto y descubre por qué Mirador de Anapoima puede ser el lugar que estabas buscando.</p>
-        <div class="contacto__wa"><a class="btn btn--vidrio" data-wa="Hola, vengo de la página del Condominio Mirador de Anapoima y quiero más información." data-donde="contacto" href="#">WhatsApp 318 333 4706<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a></div>
-      </div>
-      <div class="panel-form" id="visita">
-        <div class="pestanas" role="tablist" aria-label="Tipo de solicitud">
-          <button type="button" role="tab" id="tab-visita" aria-selected="true" aria-controls="form-visita">Agendar visita</button>
-          <button type="button" role="tab" id="tab-asesoria" aria-selected="false" aria-controls="f-asesoria">Recibir asesoría</button>
-        </div>
-        <form id="form-visita" role="tabpanel" aria-labelledby="tab-visita" novalidate>
-          <div class="campos">
-            <div class="campo"><label for="v-nombre">Nombre completo</label><input id="v-nombre" autocomplete="name" placeholder="Tu nombre"></div>
-            <div class="campo"><label for="v-tel">WhatsApp</label><input id="v-tel" inputmode="tel" autocomplete="tel-national" placeholder="321 123 4567"></div>
-            <div class="campo"><label for="v-fecha">Fecha preferida</label><input id="v-fecha" type="date"></div>
-            <div class="campo"><label for="v-personas">Visitantes</label><select id="v-personas"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option value="6 o más">6 o más</option></select></div>
-          </div>
-          <label class="consentimiento"><input type="checkbox" id="v-ok">Autorizo el tratamiento de mis datos personales según la política de privacidad para agendar la visita.</label>
-          <p class="form-msj" id="v-msj"></p>
-          <a class="btn btn--oscuro btn--ancho" id="v-enviar" href="#" target="_blank" rel="noopener">Agendar mi visita<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
-        </form>
-        <form id="f-asesoria" role="tabpanel" aria-labelledby="tab-asesoria" hidden novalidate>
-          <div class="campos">
-            <div class="campo"><label for="a-nombre">Nombre completo</label><input id="a-nombre" autocomplete="name" placeholder="Tu nombre"></div>
-            <div class="campo"><label for="a-tel">WhatsApp</label><input id="a-tel" inputmode="tel" autocomplete="tel-national" placeholder="321 123 4567"></div>
-          </div>
-          <fieldset style="border:0;padding:0;margin:0">
-            <legend style="font-size:13px;color:var(--gris);margin-bottom:8px;font-weight:500">¿Qué buscas?</legend>
-            <div class="opciones">
-              <label><input type="radio" name="busca" value="vivir"><span>Vivir</span></label>
-              <label><input type="radio" name="busca" value="vacacionar"><span>Vacacionar</span></label>
-              <label><input type="radio" name="busca" value="invertir"><span>Invertir</span></label>
-            </div>
-          </fieldset>
-          <label class="consentimiento"><input type="checkbox" id="a-ok">Autorizo el tratamiento de mis datos personales según la política de privacidad para recibir asesoría.</label>
-          <p class="form-msj" id="a-msj"></p>
-          <a class="btn btn--oscuro btn--ancho" id="a-enviar" href="#" target="_blank" rel="noopener">Recibir asesoría<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a>
-        </form>
+<section class="marco" aria-labelledby="t-cta">
+  <div class="cta sobre-foto" data-revelar>
+    <img data-parallax src="fotos/montanas.webp" alt="" width="1600" height="900" loading="lazy">
+    <div class="cta__in">
+      <p class="ceja"><img src="fotos/colibri.png" alt="" width="172" height="200">Te esperamos</p>
+      <h2 id="t-cta">El lugar de tus sueños <em>merece ser conocido</em></h2>
+      <div class="cta__btns">
+        <a class="btn btn--blanco" href="contacto.html">Agenda tu visita<span class="btn__c"><svg><use href="#i-flecha"/></svg></span></a>
+        <a class="btn btn--vidrio" data-wa="Hola, vengo de la página del Condominio Mirador de Anapoima y quiero más información." data-donde="cta-inicio" href="#">WhatsApp 318 333 4706<span class="btn__c"><svg><use href="#i-wa"/></svg></span></a>
       </div>
     </div>
   </div>
 </section>
 
 </main>
-
 <footer class="pie">
   <div class="carril">
+    <svg class="horizonte" data-revelar viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 L60 44 L110 47 L170 30 L220 38 L270 26 L330 34 L380 18 L430 28 L470 24 L520 36 L580 30 L640 40 L700 22 L750 30 L800 14 L860 26 L910 20 L960 34 L1020 28 L1080 40 L1140 32 L1200 44"/></svg>
     <div class="pie__in">
       <div class="pie__marca">
         <img src="fotos/logo.webp" alt="Condominio Mirador de Anapoima" width="356" height="400" loading="lazy">
         <p>Condominio campestre en Anapoima, Cundinamarca. Comercializa Ortiz Expertos en Finca Raíz.</p>
       </div>
       <div>
+        <h3>Explora</h3>
+        <ul><li><a href="proyecto.html">El proyecto</a></li><li><a href="lotes.html">Lotes</a></li><li><a href="financiacion.html">Financiación</a></li><li><a href="galeria.html">Galería</a></li><li><a href="ubicacion.html">Ubicación</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </div>
+      <div>
         <h3>Contacto</h3>
         <ul>
           <li><a data-wa="Hola, vengo de la página del Condominio Mirador de Anapoima y quiero más información." data-donde="pie" href="#">WhatsApp +57 318 333 4706</a></li>
           <li>condominiomiradordeanapoima@gmail.com</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Explora</h3>
-        <ul>
-          <li><a href="#lotes">Lotes disponibles</a></li>
-          <li><a href="#financiacion">Financiación</a></li>
-          <li><a href="#ubicacion">Ubicación</a></li>
+          <li>Anapoima, Cundinamarca</li>
         </ul>
       </div>
       <div>
@@ -899,13 +269,11 @@ h3{font-family:var(--f-sans);font-weight:600;font-size:18px;line-height:1.3}
     </div>
   </div>
 </footer>
-
 <a class="wa-flota" data-wa="Hola, vengo de la página del Condominio Mirador de Anapoima y quiero más información." data-donde="flotante" href="#" aria-label="Escríbenos por WhatsApp"><svg><use href="#i-wa"/></svg></a>
 <div class="barra-movil">
   <a class="btn btn--wa" data-wa="Hola, vengo de la página del Condominio Mirador de Anapoima y quiero más información." data-donde="barra-movil" href="#">WhatsApp</a>
-  <a class="btn btn--oscuro" href="#lotes">Ver lotes</a>
+  <a class="btn btn--oscuro" href="lotes.html">Ver lotes</a>
 </div>
-
 <dialog class="visor" id="visor" aria-label="Fotos del condominio">
   <div class="visor__in">
     <div class="visor__cab"><span id="visor-txt"></span><button type="button" data-cerrar aria-label="Cerrar"><svg><use href="#i-cerrar"/></svg></button></div>
@@ -913,334 +281,6 @@ h3{font-family:var(--f-sans);font-weight:600;font-size:18px;line-height:1.3}
     <div class="visor__pie"><button type="button" data-ant aria-label="Foto anterior"><svg><use href="#i-izq"/></svg></button><button type="button" data-sig aria-label="Foto siguiente"><svg><use href="#i-der"/></svg></button></div>
   </div>
 </dialog>
-
-<script>
-(function(){
-  var WA = '573183334706';
-  var $ = function(s, c){ return (c || document).querySelector(s); };
-  var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
-  var M = function(n){ return '$' + Math.round(n).toLocaleString('es-CO'); };
-  var num = function(v){ return Number(String(v).replace(/\D/g, '')) || 0; };
-  var celular = function(v){ var d = String(v).replace(/\D/g, ''); if (d.length === 12 && d.indexOf('57') === 0) d = d.slice(2); return d.length === 10 && d[0] === '3' ? d : ''; };
-
-  // Medición: eventos para GA4/GTM y origen de campaña en el mensaje de WhatsApp
-  window.dataLayer = window.dataLayer || [];
-  var evento = function(nombre, datos){ var o = { event: nombre }; for (var k in (datos || {})) o[k] = datos[k]; window.dataLayer.push(o); };
-  var campana = (function(){
-    try {
-      var q = new URLSearchParams(location.search);
-      var f = q.get('utm_source'), c = q.get('utm_campaign');
-      if (q.get('fbclid') && !f) f = 'facebook';
-      if (q.get('gclid') && !f) f = 'google';
-      return f ? (f + (c ? ' / ' + c : '')) : '';
-    } catch (e) { return ''; }
-  })();
-  var wa = function(txt){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(txt + (campana ? '\n(Ref: ' + campana + ')' : '')); };
-  $$('[data-wa]').forEach(function(a){
-    a.href = wa(a.getAttribute('data-wa')); a.target = '_blank'; a.rel = 'noopener';
-    a.addEventListener('click', function(){ evento('clic_whatsapp', { ubicacion: a.getAttribute('data-donde') || '' }); });
-  });
-  $$('[data-evento]').forEach(function(a){ a.addEventListener('click', function(){ evento(a.getAttribute('data-evento')); }); });
-
-  // Menú del celular
-  var cab = $('#cab'), bMenu = $('.cab__menu');
-  var cerrarMenu = function(){ cab.classList.remove('is-abierto'); bMenu.setAttribute('aria-expanded', 'false'); bMenu.setAttribute('aria-label', 'Abrir menú'); };
-  bMenu.addEventListener('click', function(){
-    var abierto = cab.classList.toggle('is-abierto');
-    bMenu.setAttribute('aria-expanded', abierto ? 'true' : 'false');
-    bMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
-  });
-  $$('#menu a').forEach(function(a){ a.addEventListener('click', cerrarMenu); });
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') cerrarMenu(); });
-
-  /* ---------- Plano de lotes (datos de ejemplo) ---------- */
-  var svgNS = 'http://www.w3.org/2000/svg';
-  var nodo = function(tag, at){ var n = document.createElementNS(svgNS, tag); for (var k in at) n.setAttribute(k, at[k]); return n; };
-  var VIAS = [
-    'M 30 470 C 170 470, 220 380, 330 380 S 520 450, 640 400 S 820 320, 870 300',
-    'M 330 380 C 300 300, 360 240, 470 230 S 680 250, 780 170',
-    'M 470 230 C 430 170, 470 110, 560 90'
-  ];
-  var gVias = $('#plano-vias'), gLotes = $('#plano-lotes'), gExtra = $('#plano-extras');
-  VIAS.forEach(function(d){
-    gVias.appendChild(nodo('path', { d: d, fill: 'none', stroke: '#FFFFFF', 'stroke-width': 20, 'stroke-linecap': 'round' }));
-    gVias.appendChild(nodo('path', { d: d, fill: 'none', stroke: '#E2DBCC', 'stroke-width': 2, 'stroke-dasharray': '8 10', 'stroke-linecap': 'round' }));
-  });
-  var semilla = 7;
-  var azar = function(){ semilla = (semilla * 16807) % 2147483647; return (semilla - 1) / 2147483646; };
-  var LOTES = [], TOTAL = 70, PASO = 34;
-  var rutas = VIAS.map(function(d){ var p = nodo('path', { d: d }); gVias.appendChild(p); return p; });
-  var puntosVia = [];
-  rutas.forEach(function(p){ var L = p.getTotalLength(); for (var s = 0; s <= L; s += 6) puntosVia.push(p.getPointAtLength(s)); });
-  var libre = function(cx, cy, r){
-    for (var i = 0; i < puntosVia.length; i++) { var q = puntosVia[i]; if (Math.hypot(q.x - cx, q.y - cy) < r + 9) return false; }
-    for (var j = 0; j < LOTES.length; j++) { var o = LOTES[j]; if (Math.hypot(o.cx - cx, o.cy - cy) < (r + o.r) * .92) return false; }
-    return cx > 20 && cx < 880 && cy > 20 && cy < 540;
-  };
-  rutas.forEach(function(p){
-    var L = p.getTotalLength();
-    for (var s = 26; s < L - 14 && LOTES.length < TOTAL; s += PASO) {
-      var a = p.getPointAtLength(s - 1), b = p.getPointAtLength(s + 1);
-      var ang = Math.atan2(b.y - a.y, b.x - a.x);
-      [-1, 1].forEach(function(lado){
-        if (LOTES.length >= TOTAL) return;
-        var w = PASO - 5, h = 34 + azar() * 8, off = 14 + h / 2;
-        var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
-        var cx = mx - lado * off * Math.sin(ang), cy = my + lado * off * Math.cos(ang);
-        var r = Math.max(w, h) / 2 * .8;
-        var e = azar(), ar = azar();
-        if (!libre(cx, cy, r)) return;
-        LOTES.push({ x: mx, y: my, ang: ang * 180 / Math.PI, lado: lado, w: w, h: h, cx: cx, cy: cy, r: r,
-          estado: e < .62 ? 'disponible' : (e < .78 ? 'reservado' : 'vendido'),
-          area: Math.round((1000 + ar * 650) / 10) * 10 });
-      });
-    }
-  });
-  rutas.forEach(function(p){ gVias.removeChild(p); });
-  LOTES.forEach(function(l, i){ l.num = i + 1; });
-  var COLOR = { disponible: '#7FA05A', reservado: '#D6A85A', vendido: '#CBC4B9' };
-  var ETQ = { disponible: 'Disponible', reservado: 'Reservado', vendido: 'Vendido' };
-  LOTES.forEach(function(l){
-    var g = nodo('g', { class: 'lote', transform: 'translate(' + l.x.toFixed(1) + ' ' + l.y.toFixed(1) + ') rotate(' + l.ang.toFixed(1) + ')', tabindex: 0, role: 'button', 'aria-label': 'Lote ' + l.num + ', ' + ETQ[l.estado] });
-    var y0 = l.lado < 0 ? -(14 + l.h) : 14;
-    g.appendChild(nodo('path', { d: 'M ' + (-l.w / 2) + ' ' + y0 + ' h ' + l.w + ' v ' + l.h + ' h ' + (-l.w) + ' z', fill: COLOR[l.estado], stroke: '#FFFFFF', 'stroke-width': 2 }));
-    var t = nodo('text', { x: 0, y: y0 + l.h / 2 + 4, 'text-anchor': 'middle', 'font-family': 'Plus Jakarta Sans, sans-serif', 'font-size': 11, 'font-weight': 700, fill: l.estado === 'vendido' ? '#766E64' : '#FFFFFF', 'pointer-events': 'none' });
-    if (Math.abs(l.ang) > 90) t.setAttribute('transform', 'rotate(180 0 ' + (y0 + l.h / 2) + ')');
-    t.textContent = l.num; g.appendChild(t);
-    l.g = g; gLotes.appendChild(g);
-    g.addEventListener('click', function(){ elegir(l); });
-    g.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); elegir(l); } });
-  });
-  var rotulo = function(x, y, txt, at){ var t = nodo('text', Object.assign({ x: x, y: y, 'text-anchor': 'middle', 'font-family': 'Plus Jakarta Sans, sans-serif', 'font-size': 12, 'font-weight': 600, 'letter-spacing': 1.2 }, at)); t.textContent = txt; gExtra.appendChild(t); };
-  gExtra.appendChild(nodo('rect', { x: 18, y: 492, width: 104, height: 32, rx: 16, fill: '#1F2F27' }));
-  rotulo(70, 513, 'PORTERÍA', { fill: '#FFFFFF' });
-  gExtra.appendChild(nodo('ellipse', { cx: 770, cy: 470, rx: 64, ry: 40, fill: '#DCE5CC' }));
-  rotulo(770, 474, 'ZONA VERDE', { fill: '#4D6B2C' });
-  rotulo(870, 36, 'VISTA AL PUEBLO ↑', { 'text-anchor': 'end', fill: '#8B847B' });
-
-  var cuenta = function(e){ return LOTES.filter(function(l){ return l.estado === e; }).length; };
-  $('#n-disp').textContent = '(' + cuenta('disponible') + ')';
-  $('#n-res').textContent = '(' + cuenta('reservado') + ')';
-  $('#n-vend').textContent = '(' + cuenta('vendido') + ')';
-  var lista = $('#lista-lotes');
-  LOTES.filter(function(l){ return l.estado === 'disponible'; }).forEach(function(l){
-    var o = document.createElement('option'); o.value = l.num; o.textContent = 'Lote ' + l.num + ' · ' + l.area.toLocaleString('es-CO') + ' m²'; lista.appendChild(o);
-  });
-  lista.addEventListener('change', function(){ var l = LOTES[Number(lista.value) - 1]; if (l) elegir(l); });
-  $('#solo-disp').addEventListener('change', function(e){
-    LOTES.forEach(function(l){ l.g.style.opacity = (e.target.checked && l.estado !== 'disponible') ? '.2' : ''; });
-  });
-  var marcador = $('#marcador'), loteActual = null;
-  var elegir = function(l){
-    if (loteActual) loteActual.g.classList.remove('is-activo');
-    loteActual = l; l.g.classList.add('is-activo');
-    marcador.style.left = (l.cx / 900 * 100) + '%';
-    marcador.style.top = (l.cy / 560 * 100) + '%';
-    marcador.classList.add('is-visible');
-    $('#ficha-vacia').hidden = true; $('#ficha-lote').hidden = false;
-    $('#f-num').textContent = l.num;
-    var e = $('#f-estado'); e.className = 'estado estado--' + l.estado; e.textContent = ETQ[l.estado];
-    $('#f-area').textContent = l.area.toLocaleString('es-CO') + ' m²';
-    var w1 = $('#f-wa');
-    w1.href = wa('Hola, vengo de la página del Condominio Mirador de Anapoima. Quiero información del lote ' + l.num + ' (' + l.area.toLocaleString('es-CO') + ' m²).');
-    w1.hidden = l.estado === 'vendido'; $('#f-simular').hidden = l.estado === 'vendido';
-    lista.value = l.estado === 'disponible' ? String(l.num) : '';
-    evento('ver_lote', { lote: l.num, estado: l.estado });
-  };
-  $('#f-wa').addEventListener('click', function(){ evento('clic_whatsapp', { ubicacion: 'ficha-lote', lote: loteActual ? loteActual.num : '' }); });
-  $('#f-simular').addEventListener('click', function(){
-    if (!loteActual) return;
-    $('#sim-lote').hidden = false;
-    $('#sim-lote-txt').textContent = 'Simulando el lote ' + loteActual.num + ' · ' + loteActual.area.toLocaleString('es-CO') + ' m²';
-    pintar();
-    document.getElementById('financiacion').scrollIntoView({ behavior: 'smooth' });
-  });
-
-  /* ---------- Simulador: calcula sin pedir datos ---------- */
-  var CFG = { precioDesde: 220000000, sepMin: 2000000, cuotaInicial: 42000000, plazoMax: 12 };
-  var modo = 'financiado', simulado = false, calc = null, filasTxt = [];
-  var meses = function(n){ return n + (n === 1 ? ' mes' : ' meses'); };
-  var calcular = function(){
-    var fin = modo === 'financiado';
-    var P = num($('#s-valor').value), S = num($('#s-sep').value);
-    var N = Math.min(CFG.plazoMax, Math.max(1, Number($('#s-plazo').value) || CFG.plazoMax));
-    var CI = fin ? CFG.cuotaInicial : 0;
-    var sI = fin ? Math.max(CI - S, 0) : 0;
-    var sD = fin ? Math.max(P - Math.max(CI, S), 0) : Math.max(P - S, 0);
-    var cB = 0, cF = 0;
-    if (fin && sD > 0) { if (N <= 1) { cB = sD; cF = sD; } else { cB = Math.floor(sD / N / 1000) * 1000; cF = sD - cB * (N - 1); } }
-    return { fin: fin, P: P, S: S, N: N, CI: CI, sI: sI, sD: sD, cB: cB, cF: cF };
-  };
-  var revisarCotiza = function(){};
-  var pintar = function(){
-    var c = calcular(); calc = c;
-    var sepErr = c.S < CFG.sepMin, valErr = c.P < CFG.precioDesde;
-    var eS = $('#s-sep-error'), eV = $('#s-valor-error');
-    eS.hidden = !sepErr; eS.textContent = sepErr ? 'La separación mínima es ' + M(CFG.sepMin) + '.' : '';
-    eV.hidden = !valErr; eV.textContent = valErr ? 'Los lotes están desde ' + M(CFG.precioDesde) + '.' : '';
-    $('#c-sep').classList.toggle('is-error', sepErr);
-    $('#c-valor').classList.toggle('is-error', valErr);
-    $('#bloque-plazo').hidden = !c.fin;
-    $('#s-plazo-txt').textContent = meses(c.N);
-    filasTxt = c.fin
-      ? [['Valor del lote', M(c.P)], ['Cuota inicial', M(c.CI)], ['Separación (parte de la inicial)', M(c.S)], ['Resto de la inicial', M(c.sI)], ['Total a financiar', M(c.sD)], ['Plazo', meses(c.N)]]
-      : [['Valor del lote', M(c.P)], ['Separación', M(c.S)], ['Saldo a pagar de contado', M(c.sD)]];
-    $('#sim-filas').innerHTML = filasTxt.map(function(f){ return '<li><span>' + f[0] + '</span><b>' + f[1] + '</b></li>'; }).join('');
-    var et = $('#cuota-et'), val = $('#cuota-valor'), det = $('#cuota-detalle');
-    if (sepErr || valErr) { et.textContent = 'Revisa los valores'; val.textContent = '—'; det.textContent = ''; }
-    else if (c.fin) {
-      et.textContent = c.N > 1 ? 'Tu cuota mensual aproximada' : 'Pago único del saldo';
-      val.textContent = M(c.N > 1 ? c.cB : c.cF);
-      det.textContent = c.N > 1 ? meses(c.N - 1) + ' así y una última cuota de ' + M(c.cF) + '.' : 'Pagas el saldo en un solo mes.';
-    } else { et.textContent = 'Saldo a pagar de contado'; val.textContent = M(c.sD); det.textContent = 'Después de la separación de ' + M(c.S) + '.'; }
-    revisarCotiza();
-  };
-  var formatear = function(inp){ inp.addEventListener('input', function(){ var n = num(inp.value); inp.value = n ? n.toLocaleString('es-CO') : ''; }); };
-  formatear($('#s-valor')); formatear($('#s-sep'));
-  $('#sim').addEventListener('input', function(){ pintar(); if (!simulado) { simulado = true; evento('simulacion'); } });
-  $('#sim').addEventListener('submit', function(e){ e.preventDefault(); });
-  $$('[data-modo]').forEach(function(b){
-    b.addEventListener('click', function(){
-      modo = b.getAttribute('data-modo');
-      $$('[data-modo]').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      pintar();
-    });
-  });
-  $('#sim-lote-quitar').addEventListener('click', function(){ $('#sim-lote').hidden = true; pintar(); });
-
-  // Formularios que terminan en WhatsApp: el botón es un enlace real que se arma con lo escrito
-  var conectar = function(cfg){
-    var btn = $(cfg.boton), msj = $(cfg.msj), intento = false;
-    var revisar = function(){
-      var r = cfg.validar();
-      cfg.campos.forEach(function(k){ var el = $(k[0]); var caja = el.closest('.campo') || el.closest('.consentimiento'); if (caja) caja.classList.toggle('is-error', intento && !r.ok[k[1]]); });
-      msj.textContent = intento ? r.error : '';
-      btn.setAttribute('aria-disabled', r.listo ? 'false' : 'true');
-      btn.href = r.listo ? wa(r.texto) : '#';
-      return r;
-    };
-    $(cfg.form).addEventListener('input', revisar);
-    $(cfg.form).addEventListener('change', revisar);
-    $(cfg.form).addEventListener('submit', function(e){ e.preventDefault(); });
-    btn.addEventListener('click', function(e){
-      intento = true; var r = revisar();
-      if (!r.listo) { e.preventDefault(); return; }
-      evento(cfg.evento);
-    });
-    revisar();
-    return revisar;
-  };
-  var nombreOk = function(v){ return v.trim().length >= 3; };
-  var errBase = function(ok){ return !ok.nombre ? 'Escribe tu nombre.' : !ok.tel ? 'Escribe un WhatsApp válido (10 dígitos).' : ''; };
-
-  revisarCotiza = conectar({
-    form: '#cotiza', boton: '#c-enviar', msj: '#c-msj', evento: 'cotizacion_pedida',
-    campos: [['#c-nombre', 'nombre'], ['#c-tel', 'tel']],
-    validar: function(){
-      var n = $('#c-nombre').value.trim(), t = celular($('#c-tel').value);
-      var ok = { nombre: nombreOk(n), tel: !!t };
-      var c = calc || calcular();
-      var datosOk = c.S >= CFG.sepMin && c.P >= CFG.precioDesde;
-      var error = errBase(ok) || (!datosOk ? 'Revisa los valores de la simulación.' : '');
-      var lote = !$('#sim-lote').hidden && loteActual ? ' del lote ' + loteActual.num : '';
-      var txt = 'Hola, soy ' + n + '. Quiero una cotización personalizada' + lote + ' en el Condominio Mirador de Anapoima. Mi simulación:\n'
-        + filasTxt.map(function(f){ return f[0] + ': ' + f[1]; }).join('\n')
-        + (c.fin && c.sD > 0 ? '\nCuota aproximada: ' + M(c.cB) : '') + '\nMi WhatsApp: ' + t;
-      return { ok: ok, listo: ok.nombre && ok.tel && datosOk, error: error, texto: txt };
-    }
-  });
-  conectar({
-    form: '#f-portafolio', boton: '#p-enviar', msj: '#p-msj', evento: 'portafolio_pedido',
-    campos: [['#p-nombre', 'nombre'], ['#p-tel', 'tel']],
-    validar: function(){
-      var n = $('#p-nombre').value.trim(), t = celular($('#p-tel').value);
-      var ok = { nombre: nombreOk(n), tel: !!t };
-      return { ok: ok, listo: ok.nombre && ok.tel, error: errBase(ok), texto: 'Hola, soy ' + n + '. Quiero recibir el portafolio del Condominio Mirador de Anapoima con precios y fotos.\nMi WhatsApp: ' + t };
-    }
-  });
-  conectar({
-    form: '#f-asesoria', boton: '#a-enviar', msj: '#a-msj', evento: 'formulario_asesoria',
-    campos: [['#a-nombre', 'nombre'], ['#a-tel', 'tel'], ['#a-ok', 'ok']],
-    validar: function(){
-      var n = $('#a-nombre').value.trim(), t = celular($('#a-tel').value);
-      var b = ($('input[name="busca"]:checked') || {}).value || '';
-      var ok = { nombre: nombreOk(n), tel: !!t, ok: $('#a-ok').checked };
-      var error = errBase(ok) || (!ok.ok ? 'Acepta el tratamiento de datos para continuar.' : '');
-      return { ok: ok, listo: ok.nombre && ok.tel && ok.ok, error: error, texto: 'Hola, soy ' + n + '. Quiero asesoría sobre el Condominio Mirador de Anapoima.' + (b ? ' Busco un lote para ' + b + '.' : '') + '\nMi WhatsApp: ' + t };
-    }
-  });
-  var fecha = $('#v-fecha');
-  try { var hoy = new Date(); hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset()); fecha.min = hoy.toISOString().slice(0, 10); } catch (e) {}
-  conectar({
-    form: '#form-visita', boton: '#v-enviar', msj: '#v-msj', evento: 'visita_agendada',
-    campos: [['#v-nombre', 'nombre'], ['#v-tel', 'tel'], ['#v-fecha', 'fecha'], ['#v-ok', 'ok']],
-    validar: function(){
-      var n = $('#v-nombre').value.trim(), t = celular($('#v-tel').value), f = fecha.value, p = $('#v-personas').value;
-      var ok = { nombre: nombreOk(n), tel: !!t, fecha: !!f, ok: $('#v-ok').checked };
-      var error = errBase(ok) || (!ok.fecha ? 'Elige la fecha en que te gustaría venir.' : !ok.ok ? 'Acepta el tratamiento de datos para continuar.' : '');
-      var fTxt = f;
-      try { if (f) fTxt = new Date(f + 'T12:00:00').toLocaleDateString('es-CO', { weekday: 'long', day: 'numeric', month: 'long' }); } catch (e) {}
-      return { ok: ok, listo: ok.nombre && ok.tel && ok.fecha && ok.ok, error: error, texto: 'Hola, soy ' + n + '. Quiero agendar una visita al Condominio Mirador de Anapoima.\nFecha preferida: ' + fTxt + '\nVisitantes: ' + p + '\nMi WhatsApp: ' + t };
-    }
-  });
-  // Pestañas visita / asesoría
-  $$('.pestanas [role=tab]').forEach(function(t){
-    t.addEventListener('click', function(){
-      $$('.pestanas [role=tab]').forEach(function(x){ var sel = x === t; x.setAttribute('aria-selected', sel ? 'true' : 'false'); document.getElementById(x.getAttribute('aria-controls')).hidden = !sel; });
-    });
-  });
-  pintar();
-
-  /* ---------- Galería en mosaico por categorías ---------- */
-  var FOTOS = [
-    { f: 'panoramica', t: 'Vista hacia el casco urbano', c: 'vistas' },
-    { f: 'senderos', t: 'Senderos entre la vegetación', c: 'verdes' },
-    { f: 'lotes-verdes', t: 'Lotes y vías internas', c: 'lotes' },
-    { f: 'mirador-pueblo', t: 'Punto alto con vista al pueblo', c: 'vistas' },
-    { f: 'valle', t: 'Vía interna con vista al valle', c: 'vias' },
-    { f: 'montanas', t: 'Lotes con montañas al fondo', c: 'vistas' },
-    { f: 'loma', t: 'Lote en la parte alta', c: 'lotes' },
-    { f: 'via-postes', t: 'Vía de acceso con red de energía', c: 'vias' },
-    { f: 'lote-arboles', t: 'Lote con árboles y pasto', c: 'lotes' },
-    { f: 'vias-internas', t: 'Trazado de vías internas', c: 'vias' },
-    { f: 'porteria', t: 'Zona de acceso del condominio', c: 'entrada' },
-    { f: 'vista-pueblo', t: 'Lotes con el pueblo al fondo', c: 'vistas' }
-  ];
-  var CATS = [['todas', 'Todas'], ['vistas', 'Vistas'], ['lotes', 'Lotes'], ['vias', 'Vías'], ['verdes', 'Zonas verdes'], ['entrada', 'Entrada']];
-  var NOMBRE = { vistas: 'Vista', lotes: 'Lote', vias: 'Vía', verdes: 'Zona verde', entrada: 'Entrada' };
-  var filtro = 'todas', visibles = [];
-  var bento = $('#bento'), filtros = $('#filtros');
-  CATS.forEach(function(c){
-    var b = document.createElement('button'); b.type = 'button'; b.textContent = c[1]; b.setAttribute('aria-pressed', c[0] === filtro ? 'true' : 'false');
-    b.addEventListener('click', function(){ filtro = c[0]; $$('button', filtros).forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); armar(); });
-    filtros.appendChild(b);
-  });
-  var armar = function(){
-    bento.innerHTML = '';
-    visibles = filtro === 'todas' ? FOTOS : FOTOS.filter(function(x){ return x.c === filtro; });
-    visibles.forEach(function(x, i){
-      var b = document.createElement('button'); b.type = 'button';
-      b.className = 'foto' + (filtro === 'todas' && i === 0 ? ' foto--g' : (filtro === 'todas' && (i === 3 || i === 8) ? ' foto--a' : ''));
-      b.innerHTML = '<img src="fotos/' + x.f + (i === 0 && filtro === 'todas' ? '' : '-900') + '.webp" alt="' + x.t + '" width="900" height="506" loading="lazy"><span class="foto__chip vidrio">' + NOMBRE[x.c] + '</span><span class="foto__pie">' + x.t + '</span>';
-      b.addEventListener('click', function(){ abrir(i); });
-      bento.appendChild(b);
-    });
-  };
-  armar();
-  var visor = $('#visor'), vImg = $('#visor-img'), vTxt = $('#visor-txt'), actual = 0;
-  var mostrar = function(i){
-    actual = (i + visibles.length) % visibles.length;
-    vImg.src = 'fotos/' + visibles[actual].f + '.webp'; vImg.alt = visibles[actual].t;
-    vTxt.textContent = (actual + 1) + ' de ' + visibles.length + ' · ' + visibles[actual].t;
-  };
-  var abrir = function(i){ mostrar(i); if (typeof visor.showModal === 'function') visor.showModal(); else visor.setAttribute('open', ''); };
-  $('[data-cerrar]', visor).addEventListener('click', function(){ visor.close(); });
-  $('[data-ant]', visor).addEventListener('click', function(){ mostrar(actual - 1); });
-  $('[data-sig]', visor).addEventListener('click', function(){ mostrar(actual + 1); });
-  visor.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft') mostrar(actual - 1); if (e.key === 'ArrowRight') mostrar(actual + 1); });
-  visor.addEventListener('click', function(e){ if (e.target === visor || e.target.classList.contains('visor__img')) visor.close(); });
-})();
-</script>
-
+<script src="app.js" defer></script>
 </body>
 </html>
