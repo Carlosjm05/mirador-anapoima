@@ -959,3 +959,51 @@ a.canal:hover{transform:translateY(-4px)}
 
 @media (max-width:720px){.cifras-vidrio .vidrio b{font-size:24px;white-space:nowrap}.cifras-vidrio .vidrio span{font-size:12px}}
 @media (max-width:360px){.cifras-vidrio .vidrio b{font-size:20px}.cifras-vidrio{gap:6px}}
+
+/* ===== Movimiento unificado: recorridos cortos, curvas suaves, fundidos (va al final para mandar) ===== */
+:root{--suave:cubic-bezier(.22,1,.36,1);--vaiven:cubic-bezier(.65,0,.35,1)}
+.entra{animation:entrar-suave 1.4s var(--suave) both;animation-delay:var(--d,0s)}
+@keyframes entrar-suave{from{transform:translateY(14px)}to{transform:none}}
+[data-revelar]{transition:opacity 1.2s var(--suave),transform 1.2s var(--suave);transition-delay:var(--d,0s)}
+[data-revelar].esperando{opacity:0;transform:translateY(18px)}
+::view-transition-old(root){animation:vt-salir-suave .3s ease both}
+::view-transition-new(root){animation:vt-entrar-suave .55s var(--suave) both}
+@keyframes vt-salir-suave{to{opacity:0}}
+@keyframes vt-entrar-suave{from{opacity:0}}
+.cab-envoltura{transition:background .6s var(--suave),box-shadow .6s var(--suave)}
+.cab{transition:padding .6s var(--suave)}
+.cab__logo img{transition:height .6s var(--suave)}
+/* Las fotos con profundidad no llevan transición: el JS ya suaviza el movimiento */
+[data-parallax]{transition:none!important;animation:none!important}
+/* Zoom al pasar el cursor: más corto y más lento */
+.intro__foto:hover img,.tour:hover img,.foto:hover img,.vitrina__item:hover img,.lote-tarjeta:hover .lote-tarjeta__foto img,.carrusel__item:hover img,.bloque:hover,.razon:hover{transform:scale(1.03)}
+.intro__foto img,.tour img,.foto img,.lote-tarjeta__foto img,.carrusel__foto img{transition:transform 1.6s var(--suave)}
+.bloque{transition:transform .9s var(--suave)}
+.bloque:hover{transform:translateY(-3px)}
+.btn__c{transition:transform .6s var(--suave)}
+/* Carrusel centrado: vaivén lento */
+.vitrina__pista{transition:transform 1.3s var(--vaiven)}
+.vitrina__item{transition:transform 1.3s var(--vaiven),opacity 1.3s var(--vaiven)}
+.vitrina__puntos button{transition:width .8s var(--suave),background .6s}
+/* Día en Mirador: las capas siguen al scroll sin transición propia; los textos se funden */
+.dia__capa{transition:none}
+.dia__momento{transform:translateY(12px);transition:opacity .9s var(--suave),transform 1.2s var(--suave)}
+.dia__momento.is-activo{transform:none;transition-delay:.18s}
+.dia__astro{transition:background .8s,box-shadow .8s}
+/* Pasos de compra: dos fotos que se funden */
+.proceso__vista img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1s var(--suave)}
+.proceso__vista img.oculta{opacity:0}
+.proceso__vista img.cambia{opacity:1;transform:none}
+.proceso__texto b,.proceso__texto p{transition:opacity .5s var(--suave)}
+.proceso__texto.cambiando b,.proceso__texto.cambiando p{opacity:0}
+.proceso__lista button{transition:background .5s var(--suave)}
+.proceso__lista button svg{transition:transform .7s var(--suave),background .5s,color .5s}
+/* Línea de pagos y cinta más tranquilas */
+.linea-pagos::after{transition:transform 2.4s var(--suave) .3s}
+.cinta__pista{animation-duration:55s}
+/* Tarjetas apiladas: sin salto al fijarse */
+.pila__tarjeta{will-change:auto}
+.dia__momento{transition:opacity .35s ease,transform .5s ease}
+.dia__momento.is-activo{transition:opacity 1s var(--suave) .32s,transform 1.3s var(--suave) .32s}
+.dia__astro{z-index:1}
+.dia__cab,.dia__textos,.dia__reloj{z-index:3}

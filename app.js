@@ -80,22 +80,31 @@
     $$('[data-contar]').forEach(function (c) { if (!c.closest('[data-revelar].esperando') && c.getBoundingClientRect().top > alto * 0.9) obsC.observe(c); });
   }
 
-  /* ---------- Profundidad suave en las fotos ---------- */
+  /* ---------- Profundidad suave en las fotos de fondo (con inercia) ---------- */
   var pars = $$('[data-parallax]');
   if (pars.length && !quieto && window.innerWidth > 720) {
-    var pendiente = false;
-    var mover = function () {
-      pendiente = false;
+    var estadoP = pars.map(function () { return { actual: 0, meta: 0 }; }), corriendo = false;
+    var metas = function () {
       var h = window.innerHeight;
-      pars.forEach(function (img) {
+      pars.forEach(function (img, i) {
         var r = img.parentElement.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > h) return;
-        var p = (r.top + r.height / 2 - h / 2) / h;
-        img.style.transform = 'translate3d(0,' + (p * -28).toFixed(1) + 'px,0) scale(1.08)';
+        if (r.bottom < -100 || r.top > h + 100) return;
+        estadoP[i].meta = ((r.top + r.height / 2 - h / 2) / h) * -22;
       });
     };
-    window.addEventListener('scroll', function () { if (!pendiente) { pendiente = true; requestAnimationFrame(mover); } }, { passive: true });
-    mover();
+    var bucle = function () {
+      var falta = false;
+      pars.forEach(function (img, i) {
+        var e = estadoP[i], d = e.meta - e.actual;
+        if (Math.abs(d) > 0.05) { e.actual += d * 0.09; falta = true; }
+        img.style.transform = 'translate3d(0,' + e.actual.toFixed(2) + 'px,0) scale(1.06)';
+      });
+      if (falta) requestAnimationFrame(bucle); else corriendo = false;
+    };
+    var empujar = function () { metas(); if (!corriendo) { corriendo = true; requestAnimationFrame(bucle); } };
+    window.addEventListener('scroll', empujar, { passive: true });
+    window.addEventListener('resize', empujar);
+    metas(); estadoP.forEach(function (e) { e.actual = e.meta; }); empujar();
   }
 
   /* ---------- Vitrina centrada (inicio) ---------- */
@@ -111,7 +120,7 @@
       items.forEach(function (x, k) { x.classList.toggle('is-activo', k === iv); x.setAttribute('tabindex', k === iv ? '0' : '-1'); });
       $$('button', puntos).forEach(function (b, k) { b.setAttribute('aria-current', k === iv ? 'true' : 'false'); });
     };
-    var reiniciar = function () { clearInterval(temp); if (!quieto) temp = setInterval(function () { ir(iv + 1); }, 5200); };
+    var reiniciar = function () { clearInterval(temp); if (!quieto) temp = setInterval(function () { ir(iv + 1); }, 6500); };
     $$('[data-vitrina]').forEach(function (b) { b.addEventListener('click', function () { ir(iv + Number(b.getAttribute('data-vitrina'))); reiniciar(); }); });
     vit.addEventListener('mouseenter', function () { clearInterval(temp); });
     vit.addEventListener('mouseleave', reiniciar);
@@ -143,24 +152,34 @@
       luces.innerHTML = html;
     };
     var centros = [0, 0.34, 0.67, 1];
+    var pD = 0, metaD = 0;
     var pintarDia = function () {
-      var r = dia.getBoundingClientRect(), total = dia.offsetHeight - fijo.offsetHeight;
-      var p = Math.min(1, Math.max(0, -r.top / (total || 1)));
+      var p = pD;
       capas.forEach(function (c, i) { c.style.opacity = Math.max(0, 1 - Math.abs(p - centros[i]) / 0.34).toFixed(3); });
       luces.style.opacity = Math.max(0, (p - 0.72) / 0.28).toFixed(3);
       var W = fijo.clientWidth, H = fijo.clientHeight, x, y;
       if (p < 0.82) { var t = p / 0.82; x = W * (0.08 + 0.84 * t); y = H * (0.44 - 0.34 * Math.sin(Math.PI * t)); astro.classList.remove('es-luna'); }
       else { var u = (p - 0.82) / 0.18; x = W * (0.62 + 0.12 * u); y = H * (0.3 - 0.12 * u); astro.classList.add('es-luna'); }
       astro.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
-      var idx = Math.min(3, Math.floor(p * 4));
+      var idx = Math.min(3, Math.floor(metaD * 4));
       momentos.forEach(function (m, i) { m.classList.toggle('is-activo', i === idx); });
       var reloj = av.parentElement, cs = getComputedStyle(reloj), ancho = reloj.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
       av.style.width = (ancho * p).toFixed(1) + 'px';
     };
-    var pendD = false;
-    window.addEventListener('scroll', function () { if (!pendD) { pendD = true; requestAnimationFrame(function () { pendD = false; pintarDia(); }); } }, { passive: true });
-    window.addEventListener('resize', function () { crearLuces(); pintarDia(); });
-    crearLuces(); pintarDia();
+    var corriendoD = false;
+    var bucleD = function () {
+      var d = metaD - pD;
+      if (Math.abs(d) > 0.0004) { pD += d * 0.1; pintarDia(); requestAnimationFrame(bucleD); }
+      else { pD = metaD; pintarDia(); corriendoD = false; }
+    };
+    var empujarD = function () {
+      var r = dia.getBoundingClientRect(), total = dia.offsetHeight - fijo.offsetHeight;
+      metaD = Math.min(1, Math.max(0, -r.top / (total || 1)));
+      if (!corriendoD) { corriendoD = true; requestAnimationFrame(bucleD); }
+    };
+    window.addEventListener('scroll', empujarD, { passive: true });
+    window.addEventListener('resize', function () { crearLuces(); empujarD(); });
+    crearLuces(); empujarD(); pD = metaD; pintarDia();
   }
 
   /* ---------- Proceso de compra (proyecto) ---------- */
@@ -171,16 +190,25 @@
     { t: 'Escritura', p: 'Firmas en notaría y registras el lote a tu nombre, con escritura individual.', f: 'mirador-pueblo' }
   ];
   if ($('.proceso__lista')) {
-    var pImg = $('#proceso-img');
+    var fotoA = $('#proceso-img'), fotoB = $('#proceso-img-2'), caja = $('#proceso-texto'), pasoActual = 0, espera = null;
+    var activar = function (b) {
+      var i = Number(b.getAttribute('data-paso'));
+      $$('.proceso__lista [data-paso]').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+      if (i === pasoActual) return;
+      pasoActual = i;
+      var d = PASOS[i], visible = fotoA.classList.contains('oculta') ? fotoB : fotoA, oculta = visible === fotoA ? fotoB : fotoA;
+      oculta.src = 'fotos/' + d.f + '.webp';
+      var hecho = false;
+      var mostrarNueva = function () { if (hecho) return; hecho = true; oculta.classList.remove('oculta'); visible.classList.add('oculta'); };
+      if (oculta.decode) oculta.decode().then(mostrarNueva, mostrarNueva);
+      setTimeout(mostrarNueva, 700);
+      caja.classList.add('cambiando');
+      clearTimeout(espera);
+      espera = setTimeout(function () { $('#proceso-t').textContent = d.t; $('#proceso-p').textContent = d.p; caja.classList.remove('cambiando'); }, 280);
+    };
     $$('.proceso__lista [data-paso]').forEach(function (b) {
-      var activar = function () {
-        var i = Number(b.getAttribute('data-paso')), d = PASOS[i];
-        $$('.proceso__lista [data-paso]').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
-        pImg.classList.add('cambia');
-        setTimeout(function () { pImg.src = 'fotos/' + d.f + '.webp'; $('#proceso-t').textContent = d.t; $('#proceso-p').textContent = d.p; pImg.classList.remove('cambia'); }, 220);
-      };
-      b.addEventListener('click', activar);
-      b.addEventListener('mouseenter', function () { if (window.innerWidth > 900) activar(); });
+      b.addEventListener('click', function () { activar(b); });
+      b.addEventListener('mouseenter', function () { if (window.innerWidth > 900) activar(b); });
     });
   }
 
