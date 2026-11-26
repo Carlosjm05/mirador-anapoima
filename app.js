@@ -186,7 +186,7 @@
   var PASOS = [
     { t: 'Asesoría', p: 'Te atendemos, resolvemos tus dudas y te mostramos los lotes disponibles.', f: 'vista-pueblo' },
     { t: 'Visita', p: 'Conoces el condominio en persona o por videollamada, con cita previa.', f: 'senderos' },
-    { t: 'Separación', p: 'Separas tu lote desde $2.000.000 en la cuenta del proyecto. Ese valor hace parte de la cuota inicial.', f: 'lote-arboles' },
+    { t: 'Separación', p: 'Separas tu lote desde $5.000.000 en la cuenta del proyecto. Ese valor hace parte de la cuota inicial.', f: 'lote-arboles' },
     { t: 'Escritura', p: 'Firmas en notaría y registras el lote a tu nombre, con escritura individual.', f: 'mirador-pueblo' }
   ];
   if ($('.proceso__lista')) {
@@ -414,7 +414,7 @@
           + '<tr><th>Área (ejemplo)</th>' + ls.map(function (l) { return '<td>' + l.area.toLocaleString('es-CO') + ' m²</td>'; }).join('') + '</tr>'
           + '<tr><th>Estado</th>' + ls.map(function (l) { return '<td><span class="estado estado--' + l.estado + '">' + ETQ[l.estado] + '</span></td>'; }).join('') + '</tr>'
           + '<tr><th>Precio</th>' + ls.map(function () { return '<td>Desde $220.000.000</td>'; }).join('') + '</tr>'
-          + '<tr><th>Separación</th>' + ls.map(function () { return '<td>Desde $2.000.000</td>'; }).join('') + '</tr>'
+          + '<tr><th>Separación</th>' + ls.map(function () { return '<td>Desde $5.000.000</td>'; }).join('') + '</tr>'
           + '<tr><th></th>' + ls.map(function (l) { return '<td><a class="btn btn--wa" style="min-height:42px;padding:4px 4px 4px 14px;font-size:13.5px" target="_blank" rel="noopener" href="' + wa('Hola, quiero información del lote ' + l.num + ' del Condominio Mirador de Anapoima.') + '">Preguntar<span class="btn__c" style="width:34px;height:34px"><svg><use href="#i-wa"/></svg></span></a></td>'; }).join('') + '</tr>'
           + '</tbody></table>';
       if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
@@ -482,7 +482,7 @@
   }
 
   /* ---------- Simulador y presupuesto (financiación) ---------- */
-  var CFG = { precioDesde: 220000000, sepMin: 2000000, cuotaInicial: 42000000, plazoMax: 12 };
+  var CFG = { precioDesde: 220000000, sepMin: 5000000, cuotaInicial: 42000000, plazoMax: 12 };
   if ($('#sim')) {
     var modo = 'financiado', simulado = false, calc = null, filasTxt = [], loteURL = null;
     try { var q = new URLSearchParams(location.search); if (q.get('lote')) loteURL = { num: q.get('lote'), area: Number(q.get('area')) || 0 }; } catch (e) {}
