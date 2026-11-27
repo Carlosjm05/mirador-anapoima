@@ -482,7 +482,7 @@
   }
 
   /* ---------- Simulador y presupuesto (financiación) ---------- */
-  var CFG = { precioDesde: 220000000, sepMin: 5000000, cuotaInicial: 42000000, plazoMax: 12 };
+  var CFG = { precioDesde: 220000000, sepMin: 5000000, cuotaInicial: 44000000, plazoMax: 24 };
   if ($('#sim')) {
     var modo = 'financiado', simulado = false, calc = null, filasTxt = [], loteURL = null;
     try { var q = new URLSearchParams(location.search); if (q.get('lote')) loteURL = { num: q.get('lote'), area: Number(q.get('area')) || 0 }; } catch (e) {}
